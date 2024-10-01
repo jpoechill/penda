@@ -21,7 +21,7 @@ export default function Home() {
               Get In Touch
             </div>
             <div className="pt-4 text-left">
-              At Penda Assisted Living, we are committed to providing compassionate, personalized care for every resident. Whether you're seeking more information about our services, scheduling a tour, or have any questions, we are here to help.
+              At Penda Assisted Living, we are committed to providing compassionate, personalized care for every resident. Whether you&apos;re seeking more information about our services, scheduling a tour, or have any questions, we are here to help.
             </div>
           </div>
 

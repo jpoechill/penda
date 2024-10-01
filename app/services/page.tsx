@@ -77,7 +77,7 @@ export default function Home() {
                 Medication Management
               </div>
               <div>
-                Skilled hands, absent yet present, weave through time's fabric, holding silence where memory breaks. Wellness hovers, undefined, a phantom breeze in the stillness. Rehabilitation spins into an endless loop, movements without direction, without past or future—just the now, suspended in something unseen.
+                Skilled hands, absent yet present, weave through time&apos;s fabric, holding silence where memory breaks. Wellness hovers, undefined, a phantom breeze in the stillness. Rehabilitation spins into an endless loop, movements without direction, without past or future—just the now, suspended in something unseen.
               </div>
             </div>
             <div className="bg-white border-[1px] border-[#016FA2] rounded-xl p-5">
