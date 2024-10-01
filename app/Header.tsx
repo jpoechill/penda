@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import localFont from "next/font/local";
 
 const bebas = localFont({

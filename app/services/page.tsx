@@ -54,7 +54,7 @@ export default function Home() {
                 Safety and Security
               </div>
               <div>
-                Your loved ones’ safety is our top priority. Penda Assisted Living is equipped with advanced emergency response systems and 24/7 staff supervision, ensuring that help is always just a call away.
+                Your loved ones&apos; safety is our top priority. Penda Assisted Living is equipped with advanced emergency response systems and 24/7 staff supervision, ensuring that help is always just a call away.
               </div>
             </div>
 
