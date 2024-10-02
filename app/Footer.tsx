@@ -19,7 +19,7 @@ export default function Footer() {
 
             <br /><br />
           </div>
-          <div className="flex flex-col justify-end align-bottom">
+          <div className="flex flex-col justify-end pt-8 md:pt-0 align-bottom">
             <div className="flex flex-row gap-6">
               <div>
                 <Link href="/about">About Us</Link>
@@ -43,7 +43,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row mt-10 pt-4 md:pt-10 justify-between w-full max-w-[1040px]">
+        <div className="flex flex-col md:flex-row mt-10 pt-10 md:pt-10 justify-between w-full max-w-[1040px]">
           <div>
             <Link href="/">
               <Image src="/img/logo_ondark.png" alt="Logo Basic" width={340} height={300}></Image>
