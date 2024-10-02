@@ -15,7 +15,7 @@ export default function Home() {
       <Header></Header>
 
       <div className="animate-[fade-me-in_.5s_ease-in-out]">
-        <div className="flex flex-col mt-[130px] justify-center items-center w-full pt-0 p-5 px-10 my-5">
+        <div className="flex flex-col mt-[116px] justify-center items-center w-full pt-0 p-5 px-10 my-5">
           <div className="text-center w-full max-w-[1040px] mb-10">
             <div className={`${bebas.className} text-[#025176] tracking-wider text-[24px]`}>
               Get In Touch
@@ -25,7 +25,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 w-full max-w-[1040px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-[1040px]">
             <div>
               <div className="w-full mb-5">
               </div>

@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <div className="flex flex-row justify-center mx-auto border w-full py-10 px-10 mt-10 text-white bg-[#016FA2]">
       <div className="w-full flex flex-col justify-center items-center">
-        <div className="flex flex-row justify-between w-full max-w-[1040px]">
+        <div className="flex flex-col md:flex-row justify-between w-full max-w-[1040px]">
           <div>
             40968 W. Portis Drive, Maricopa, AZ 85138 <br />
             <span className="font-bold">PH</span> (520) 457-7645 | <span className="font-bold">FX</span> (520) 423-3363
@@ -34,8 +34,8 @@ export default function Footer() {
                 <Link href="/contact">Contact</Link>
               </div>
             </div>
-            <div className="flex flex-row text-right pt-5 justify-end">
-              <Link href="/quote">
+            <div className="flex flex-row text-right pt-5 md:justify-end">
+              <Link href="/quote" className="w-full md:w-fit">
                 <div className={`${bebas.className} flex text-[20px] items-center justify-center tracking-wider bg-white text-[#016FA2] shadow-xl text-lg rounded-full py-2 px-5 ml-1`}>
                   Schedule a Tour
                 </div>
@@ -43,13 +43,13 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-row mt-10 pt-10 justify-between w-full max-w-[1040px]">
+        <div className="flex flex-col md:flex-row mt-10 pt-4 md:pt-10 justify-between w-full max-w-[1040px]">
           <div>
             <Link href="/">
               <Image src="/img/logo_ondark.png" alt="Logo Basic" width={340} height={300}></Image>
             </Link>
           </div>
-          <div className="text-right">
+          <div className="md:text-right mt-10 md:mt-0">
             <Image src="/social-facebook.svg" className="inline mr-7" alt="Facebook Logo" width={40} height={30}></Image>
             <Image src="/social-instagram.svg" className="inline" alt="Instagram Logo" width={40} height={30}></Image>
             <br /><br />

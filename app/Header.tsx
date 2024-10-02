@@ -63,10 +63,10 @@ export default function Header() {
       </div>
       {
         showMenu &&
-        <div className="fixed pt-[125px] z-[0] w-full px-10 pb-5 shadow-xl bg-[#fbfefe]">
+        <div className="fixed pt-[125px] top-0 z-[1] w-full px-10 pb-5 shadow-xl bg-white bg-[#fbfefe]">
           <div className="flex flex-col w-full gap-5 text-left text-lg">
             <div>
-              <Link href="/about/mission">About Us</Link>
+              <Link href="/about">About Us</Link>
             </div>
             <hr />
             <div>
@@ -74,16 +74,16 @@ export default function Header() {
             </div>
             <hr />
             <div>
-              <Link href="/projects">Facilities</Link>
+              <Link href="/facilities">Facilities</Link>
             </div>
             <hr />
             <div>
-              <Link href="/testimonials">Contact</Link>
+              <Link href="/contact">Contact</Link>
             </div>
             <hr />
           </div>
           <div>
-            <Link href="/quote" className="flex mt-5">
+            <Link href="/schedule" className="flex mt-5">
               <div className="bg-[#0062CC] shadow-xl text-lg rounded-full w-full text-center text-white py-2 px-8 ml-1">
                 Schedule a Tour
               </div>

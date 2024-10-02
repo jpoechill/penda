@@ -16,13 +16,13 @@ export default function Home() {
       <Header></Header>
 
       <div className="animate-[fade-me-in_.5s_ease-in-out]">
-        <div className="flex flex-col mt-[130px] justify-center items-center w-full pt-0 p-5 px-10 my-5">
+        <div className="flex flex-col mt-[116px] justify-center items-center w-full pt-0 p-5 px-10 my-5">
           <div className="text-center w-full pb-2">
             <div className={`${bebas.className} text-[#025176] tracking-wider text-[24px]`}>
               Services
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-8 w-full max-w-[1040px]">
+          <div className="grid md:grid-cols-3 gap-8 w-full max-w-[1040px]">
 
             <div className="bg-white border-[1px] border-[#016FA2] rounded-xl p-5">
               <div className="flex relative flex-row w-full rounded-xl overflow-hidden mb-4">

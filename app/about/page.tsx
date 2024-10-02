@@ -16,7 +16,7 @@ export default function Home() {
       <Header></Header>
 
       <div className="animate-[fade-me-in_.5s_ease-in-out]">
-        <div className="flex flex-col mt-[130px] justify-center items-center w-full pt-0 p-5 px-10 my-5">
+        <div className="flex flex-col mt-[116px] justify-center items-center w-full pt-0 p-5 px-10 my-5">
           <div className="text-center w-full pb-2">
             <div className={`${bebas.className} text-[#025176] tracking-wider text-[22px]`}>
               Who We Are
@@ -26,14 +26,8 @@ export default function Home() {
           <div className="w-full mb-10 max-w-[1040px]">
             <Image src="/img/about_01.jpg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
           </div>
-          {/* 
-          <div className="w-full max-w-[1040px] mb-10">
-            At Penda Assisted Living, we take pride in providing a comfortable, safe, and welcoming environment for our residents. Our state-of-the-art facilities are thoughtfully designed to meet the unique needs of seniors while fostering a sense of community and independence.
-            <br /><br />
-            From spacious private and semi-private rooms to beautifully landscaped outdoor areas, every detail of our living spaces promotes both comfort and accessibility. Our common areas, including cozy lounges, dining spaces, and activity rooms, encourage social interaction and engagement, making our residents feel truly at home.
-          </div> */}
 
-          <div className="grid grid-cols-2 gap-20 max-w-[1040px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 max-w-[1040px]">
 
             <div className="w-full">
               <div className={`${bebas.className} text-[#025176] tracking-wider text-[22px] mb-5`}>
