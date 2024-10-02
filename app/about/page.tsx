@@ -23,8 +23,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-full mb-10 max-w-[1040px] border overflow-hidden rounded-2xl">
-            <Image src="/img/about_01.jpg" alt="Group Photo" className=" h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
+          <div className="w-full mb-10 max-w-[1040px] overflow-hidden">
+            <Image src="/img/about_01.jpg" alt="Group Photo" className="rounded-2xl h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 max-w-[1040px]">
