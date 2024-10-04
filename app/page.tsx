@@ -18,7 +18,7 @@ export default function Home() {
       <div className="animate-[fade-me-in_.5s_ease-in-out]">
         <div className="flex justify-center w-full p-5 pt-0 px-10 relative">
           <div className="flex relative flex-row w-full max-w-[1040px] rounded-xl overflow-hidden mt-[120px] shadow-xl">
-            <Image src="/img/cover_01.png" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
+            <Image src="/img/cover_03.jpg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
             <div className="flex items-center justify-center absolute bottom-0 text-[40px] font-['Georgia'] italic bg-black bg-opacity-30 text-center text-white w-full p-5 mb-10">
               Your Home Away from Home
             </div>

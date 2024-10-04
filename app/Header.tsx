@@ -20,9 +20,9 @@ export default function Header() {
       <div className="fixed bg-white flex justify-center w-full z-[10] top-0 border-b py-4 lg:pt-4 lg:p-3 px-10 ">
         <div className="flex flex-row justify-between w-full max-w-[1040px]">
           <div className="flex flex-row w-full justify-between lg:items-center">
-            <div className="flex flex-row gap-4 mt-2 mb-2">
+            <div className="flex flex-row gap-4 mt-0 mb-2">
               <Link href="/" className="flex flex-row gap-3 items-center">
-                <Image src="/logo.svg" alt="Top Logo" width={180} height={40}></Image>
+                <Image src="/logo_02.png" alt="Top Logo" width={130} height={20}></Image>
               </Link>
             </div>
             <div className="hidden lg:flex flex-row lg:items-center gap-10 text-lg">

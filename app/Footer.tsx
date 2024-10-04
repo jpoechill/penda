@@ -36,6 +36,11 @@ export default function Footer() {
             </div>
             <div className="flex flex-row text-right pt-5 md:justify-end">
               <Link href="/quote" className="w-full md:w-fit">
+                <div className={`${bebas.className} flex text-[20px] mr-5 items-center justify-center tracking-wider bg-white text-[#016FA2] shadow-xl text-lg rounded-full py-2 px-5 ml-1`}>
+                  Call now
+                </div>
+              </Link>
+              <Link href="/quote" className="w-full md:w-fit">
                 <div className={`${bebas.className} flex text-[20px] items-center justify-center tracking-wider bg-white text-[#016FA2] shadow-xl text-lg rounded-full py-2 px-5 ml-1`}>
                   Schedule a Tour
                 </div>
@@ -43,16 +48,18 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row mt-10 pt-10 md:pt-10 justify-between w-full max-w-[1040px]">
+        <div className="flex flex-col md:flex-row mt-10 pt-0 md:pt-0 justify-between w-full max-w-[1040px]">
           <div>
             <Link href="/">
-              <Image src="/img/logo_ondark.png" alt="Logo Basic" width={340} height={300}></Image>
+              <Image src="/logo_on_dark_02.png" alt="Logo Basic" width={250} height={300}></Image>
             </Link>
           </div>
-          <div className="md:text-right mt-10 md:mt-0">
-            <Image src="/social-facebook.svg" className="inline mr-7" alt="Facebook Logo" width={40} height={30}></Image>
-            <Image src="/social-instagram.svg" className="inline" alt="Instagram Logo" width={40} height={30}></Image>
-            <br /><br />
+          <div className="md:text-right mt-10 md:mt-0 flex flex-col justify-end align-end">
+            <div>
+              <Image src="/social-facebook.svg" className="inline mr-7" alt="Facebook Logo" width={40} height={30}></Image>
+              <Image src="/social-instagram.svg" className="inline" alt="Instagram Logo" width={40} height={30}></Image>
+              <br /><br />
+            </div>
             Penda Assisted Living © 2024
           </div>
         </div>
