@@ -46,7 +46,7 @@ export default function Header() {
                     Schedule a Tour
                   </div>
                 </Link>
-                <Link href="/schedule">
+                <Link href="tel:5555555555">
                   <div className={`${bebas.className} flex flex-row text-[20px] items-center justify-center tracking-wider border-2 border-[#016FA2] shadow-xl text-lg rounded-full text-[#016FA2] hover:bg-[#016FA2] hover:text-white py-2 px-5 ml-1`}>
                     Call Now
                   </div>

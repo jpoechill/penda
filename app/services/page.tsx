@@ -26,7 +26,7 @@ export default function Home() {
 
             <div className="bg-white border-[1px] border-[#016FA2] rounded-xl p-5">
               <div className="flex relative flex-row w-full rounded-xl overflow-hidden mb-4">
-                <Image src="/img/cozy.jpeg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
+                <Image src="/img/cozy_02.jpeg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
               </div>
               <div className={`${bebas.className} text-[#016FA2] text-[24px] pb-2`}>
                 Comfortable Living Spaces
@@ -58,33 +58,33 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white border-[1px] border-[#016FA2] rounded-xl p-5">
+            <div className="bg-[#016FA2] rounded-xl p-5 text-white">
               <div className="flex relative flex-row w-full rounded-xl overflow-hidden mb-4">
-                <Image src="/img/transport.jpeg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
+                <Image src="/img/transport_02.jpeg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
               </div>
-              <div className={`${bebas.className} text-[#016FA2] text-[24px] pb-2`}>
+              <div className={`${bebas.className} text-white text-[24px] pb-2`}>
                 Transportation Services
               </div>
               <div>
                 Daily twists into nothing, routines scatter like scattered wind. ADLs flicker, lost threads of existence undone, merging into spaces where shadows hold more weight than form. Tasks drift, shapeless, as medication becomes mist—floating, neither here nor there, dissolving into soft ripples of what could be.
               </div>
             </div>
-            <div className="bg-[#016FA2] rounded-xl p-5 text-white">
+            <div className="bg-white border-[1px] border-[#016FA2] rounded-xl p-5">
               <div className="flex relative flex-row w-full rounded-xl overflow-hidden mb-4">
-                <Image src="/img/pills.jpeg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
+                <Image src="/img/pills_02.jpeg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
               </div>
-              <div className={`${bebas.className} text-[24px] pb-2`}>
+              <div className={`${bebas.className} text-[#016FA2] text-[24px] pb-2`}>
                 Medication Management
               </div>
               <div>
                 Skilled hands, absent yet present, weave through time&apos;s fabric, holding silence where memory breaks. Wellness hovers, undefined, a phantom breeze in the stillness. Rehabilitation spins into an endless loop, movements without direction, without past or future—just the now, suspended in something unseen.
               </div>
             </div>
-            <div className="bg-white border-[1px] border-[#016FA2] rounded-xl p-5">
+            <div className="bg-[#016FA2] rounded-xl p-5 text-white">
               <div className="flex relative flex-row w-full rounded-xl overflow-hidden mb-4">
                 <Image src="/img/brain.jpeg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
               </div>
-              <div className={`${bebas.className} text-[#016FA2] text-[24px] pb-2`}>
+              <div className={`${bebas.className} text-white text-[24px] pb-2`}>
                 Memory Care
               </div>
               <div>
