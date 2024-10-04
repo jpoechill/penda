@@ -19,13 +19,13 @@ export default function Header() {
     <div>
       <div className="fixed bg-white flex justify-center w-full z-[10] top-0 border-b py-4 lg:pt-4 lg:p-3 px-10 ">
         <div className="flex flex-row justify-between w-full max-w-[1040px]">
-          <div className="flex flex-row w-full justify-between lg:items-center">
-            <div className="flex flex-row gap-4 mt-0 mb-2">
+          <div className="grid grid-cols-10 w-full  justify-between lg:items-center">
+            <div className="flex flex-row gap-4 mt-0 mb-2 col-span-3">
               <Link href="/" className="flex flex-row gap-3 items-center">
                 <Image src="/logo_02.png" alt="Top Logo" width={130} height={20}></Image>
               </Link>
             </div>
-            <div className="hidden lg:flex flex-row lg:items-center gap-10 text-lg">
+            <div className="hidden lg:flex flex-row lg:items-center col-span-4 gap-10 text-lg">
               <div>
                 <Link href="/about" scroll={true}>About Us</Link>
               </div>
@@ -38,22 +38,30 @@ export default function Header() {
               <div>
                 <Link href="/contact" scroll={true}>Contact</Link>
               </div>
-              <div >
+            </div>
+            <div className="hidden lg:flex flex-row lg:items-center gap-10 text-lg col-span-3 text-right justify-end">
+              <div className="flex flex-row">
                 <Link href="/schedule">
-                  <div className={`${bebas.className} flex flex-row text-[20px] items-center justify-center tracking-wider bg-[#016FA2] shadow-xl text-lg rounded-full text-white py-2 px-5 ml-1`}>
+                  <div className={`${bebas.className} flex flex-row text-[20px] mr-5 items-center justify-center tracking-wider border-2 border-[#016FA2] shadow-xl text-lg rounded-full text-[#016FA2] hover:bg-[#016FA2] hover:text-white py-2 px-5 ml-1`}>
                     Schedule a Tour
+                  </div>
+                </Link>
+                <Link href="/schedule">
+                  <div className={`${bebas.className} flex flex-row text-[20px] items-center justify-center tracking-wider border-2 border-[#016FA2] shadow-xl text-lg rounded-full text-[#016FA2] hover:bg-[#016FA2] hover:text-white py-2 px-5 ml-1`}>
+                    Call Now
                   </div>
                 </Link>
               </div>
             </div>
-            <div className="cursor-pointer lg:hidden pt-6 pr-0" onClick={() => { setShowMenu(!showMenu) }}>
+
+            {/* <div className="cursor-pointer lg:hidden pt-6 pr-0" onClick={() => { setShowMenu(!showMenu) }}>
               {
                 showMenu ?
                   <Image src="/cross_icon.svg" alt="logo" className="fill-[#FFFFFF]" width={23} height={23}></Image>
                   :
                   <Image src="/hamburger_icon.svg" className="fill-[#FFFFFF]" alt="logo" width={30} height={30}></Image>
               }
-            </div>
+            </div> */}
 
           </div>
 
