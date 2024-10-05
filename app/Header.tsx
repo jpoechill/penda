@@ -54,14 +54,14 @@ export default function Header() {
               </div>
             </div>
 
-            {/* <div className="cursor-pointer lg:hidden pt-6 pr-0" onClick={() => { setShowMenu(!showMenu) }}>
+            <div className="cursor-pointer lg:hidden pt-6 pr-0" onClick={() => { setShowMenu(!showMenu) }}>
               {
                 showMenu ?
                   <Image src="/cross_icon.svg" alt="logo" className="fill-[#FFFFFF]" width={23} height={23}></Image>
                   :
                   <Image src="/hamburger_icon.svg" className="fill-[#FFFFFF]" alt="logo" width={30} height={30}></Image>
               }
-            </div> */}
+            </div>
 
           </div>
 
