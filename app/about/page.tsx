@@ -33,9 +33,11 @@ export default function Home() {
               <div className={`${bebas.className} text-[#025176] tracking-wider text-[22px] mb-5`}>
                 About Us
               </div>
-              Hands untouching, breath forgotten, care floats in circles, where whispers stretch time into endless folds. Memory crumbles like dusk, where Alzheimer&apos;s dissolves into echoes, spiraling through empty mirrors of yesterday&apos;s faces. Dementia bends like waves breaking, each ripple a fragment of something never held.
+              Located in Maricopa, Arizona, we are a small private home dedicated to providing personalized care in a warm and welcoming environment.
               <br /><br />
-              Daily twists into nothing, routines scatter like scattered wind. ADLs flicker, lost threads of existence undone, merging into spaces where shadows hold more weight than form. Tasks drift, shapeless, as medication becomes mist—floating, neither here nor there, dissolving into soft ripples of what could be.
+              With over 10 years of experience, our compassionate caregivers are committed to delivering professional support tailored to meet the unique needs of each resident.
+              <br /><br />
+              {/* We prioritize comfort and safety, ensuring that everyone feels at home while receiving the highest quality of care. */}
             </div>
 
 
@@ -43,18 +45,18 @@ export default function Home() {
               <div className={`${bebas.className} text-[#025176] tracking-wider text-[22px] mb-5`}>
                 Our Story
               </div>
-              Skilled hands, absent yet present, weave through time&apos;s fabric, holding silence where memory breaks. Wellness hovers, undefined, a phantom breeze in the stillness. Rehabilitation spins into an endless loop, movements without direction, without past or future—just the now, suspended in something unseen.
+              In addition, we offer specialized amenities such as a fitness center, therapy rooms, and a wellness program to support the physical health of our residents.
               <br /><br />
-              In addition, we offer specialized amenities such as a fitness center, therapy rooms, and a wellness program to support the physical health of our residents. Whether enjoying a quiet moment in our gardens or participating in group activities, Penda Assisted Living is designed to enrich daily life, allowing residents to thrive in a nurturing and secure environment.
+              Whether enjoying a quiet moment in our gardens or participating in group activities, Penda Assisted Living is designed to enrich daily life, allowing residents to thrive in a nurturing and secure environment.
             </div>
 
             <div className="w-full max-w-[1040px]">
               <div className={`${bebas.className} text-[#025176] tracking-wider text-[22px] mb-5`}>
                 Our Difference
               </div>
-              Palliative hums in the distance, a quiet presence that holds without touching, a gentle wave of nothingness meeting the horizon of long-term care. Boundaries blur, sky fades into sea, where the infinite holds all that has been forgotten, and in that space, care becomes everything yet nothing.
+              What sets us apart is our unwavering commitment to personalized care and community connection. In our small private home, every resident is treated like family, and we take the time to understand their individual needs and preferences.
               <br /><br />
-              Shadows drift, care untangles into fragments, lost in the quiet hum of what was never there. Time slips, bending back upon itself, spiraling into whispers that fade before they are heard. Alzheimer’s dissolves into mist, memories like feathers falling into the void, where faces and names become echoes of echoes, unheld, unraveling.
+              We prioritize comfort and engagement, offering tailored activities that promote physical and emotional well-being. Our holistic approach ensures that each resident receives the attention and care they deserve, making every day meaningful.
             </div>
 
 
@@ -62,9 +64,9 @@ export default function Home() {
               <div className={`${bebas.className} text-[#025176] tracking-wider text-[22px] mb-5`}>
                 Our Values
               </div>
-              Tasks disappear, ADLs like scattered light, broken by the wind, rituals floating as dust through forgotten spaces. Movements blur, steps without ground, floating between moments where nothing holds. Medication fades into vapor, lost in the space between breaths, a soft promise that dissolves before it can be touched.
+              At the heart of our community lies a commitment to compassion, respect, and excellence. We believe in treating every resident with dignity and fostering an environment where they feel valued and empowered.
               <br /><br />
-              Hands—skilled, yet intangible—move through space, guiding the unseen threads that bind us all. Wellness is a distant star, flickering on the horizon, while rehabilitation swirls in endless cycles, journeys with no destination, a labyrinth of motion without purpose.
+              We are dedicated to creating a safe, inclusive atmosphere that promotes independence while enhancing the quality of life for all. Together, we strive to build a nurturing community where everyone can thrive.
             </div>
 
 

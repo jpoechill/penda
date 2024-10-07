@@ -23,7 +23,7 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full mb-10">
-            <Image src="/img/facilities/facil_01.jpg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
+            <Image src="/img/facilities/facil_02.jpg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
           </div>
 
           <div className="w-full max-w-[1040px] mb-10">
@@ -33,7 +33,7 @@ export default function Home() {
           </div>
 
           <div className="w-full mb-10">
-            <Image src="/img/facilities/facil_02.jpg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
+            <Image src="/img/facilities/facil_01.jpg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
           </div>
 
           <div className="w-full max-w-[1040px] mb-10">
