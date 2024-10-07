@@ -28,7 +28,7 @@ export default function Header() {
     <div>
       <div className="fixed bg-white flex justify-center w-full z-[10] top-0 border-b py-4 lg:pt-4 lg:p-3 px-10 ">
         <div className="flex flex-row justify-between w-full max-w-[1040px]">
-          <div className="grid grid-cols-10 w-full  justify-between lg:items-center">
+          <div className="grid md:grid-cols-10 grid-cols-4 w-full justify-between lg:items-center">
             <div className="flex flex-row gap-4 mt-0 mb-2 col-span-3">
               <Link href="/" className="flex flex-row gap-3 items-center">
                 <Image src="/logo_02.png" alt="Top Logo" width={130} height={20}></Image>
@@ -63,7 +63,7 @@ export default function Header() {
               </div>
             </div>
 
-            <div className="cursor-pointer lg:hidden pt-6 pr-0" onClick={() => { setShowMenu(!showMenu) }}>
+            <div className="cursor-pointer flex justify-end items-center lg:hidden pr-0" onClick={() => { setShowMenu(!showMenu) }}>
               {
                 showMenu ?
                   <Image src="/cross_icon.svg" alt="logo" className="fill-[#FFFFFF]" width={23} height={23}></Image>
@@ -82,23 +82,29 @@ export default function Header() {
         showMenu &&
         <div className="fixed pt-[125px] top-0 z-[1] w-full px-10 pb-5 shadow-xl bg-white bg-[#fbfefe]">
           <div className="flex flex-col w-full gap-5 text-left text-lg">
-            <div>
-              <Link href="/about">About Us</Link>
-            </div>
+            <Link href="/about">
+              <div>
+                About Us
+              </div>
+            </Link>
+            <hr /><Link href="/services">
+              <div>
+                Services
+              </div>
+            </Link>
             <hr />
-            <div>
-              <Link href="/services">Services</Link>
-            </div>
+            <Link href="/facilities">
+              <div>
+                Facilities
+              </div>
+            </Link>
+            <hr /><Link href="/contact">
+              <div>
+                Contact
+              </div>
+            </Link >
             <hr />
-            <div>
-              <Link href="/facilities">Facilities</Link>
-            </div>
-            <hr />
-            <div>
-              <Link href="/contact">Contact</Link>
-            </div>
-            <hr />
-          </div>
+          </div >
           <div>
             <Link href="/schedule" className="flex mt-5">
               <div className="bg-[#0062CC] shadow-xl text-lg rounded-full w-full text-center text-white py-2 px-8 ml-1">
@@ -106,7 +112,7 @@ export default function Header() {
               </div>
             </Link>
           </div>
-        </div>
+        </div >
       }
     </div >
 
