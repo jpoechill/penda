@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.custom-bg {
+    background: radial-gradient(circle at bottom left ,#005983 35%, transparent 36%), radial-gradient(circle at top right ,#005983 35%, transparent 36%);
+    background-size: 4em 4em;
+    background-color: #004f73;
+    opacity: 1
+}

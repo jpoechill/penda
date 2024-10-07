@@ -19,7 +19,7 @@ export default function Home() {
         <div className="flex flex-col mt-[116px] justify-center items-center w-full pt-0 p-5 px-10 my-5">
           <div className="text-center w-full pb-2">
             <div className={`${bebas.className} text-[#025176] tracking-wider text-[24px]`}>
-              Services
+              Our Wellness Solutions
             </div>
           </div>
           <div className="grid md:grid-cols-3 gap-8 w-full max-w-[1040px]">
@@ -66,7 +66,7 @@ export default function Home() {
                 Transportation Services
               </div>
               <div>
-                Daily twists into nothing, routines scatter like scattered wind. ADLs flicker, lost threads of existence undone, merging into spaces where shadows hold more weight than form. Tasks drift, shapeless, as medication becomes mist—floating, neither here nor there, dissolving into soft ripples of what could be.
+                We offer reliable and accessible transportation for all residents. Our vehicles are equipped for mobility needs, and our staff are trained to assist every step of the way, helping you stay connected and independent.
               </div>
             </div>
             <div className="bg-white border-[1px] border-[#016FA2] rounded-xl p-5">
@@ -77,8 +77,7 @@ export default function Home() {
                 Medication Management
               </div>
               <div>
-                Skilled hands, absent yet present, weave through time&apos;s fabric, holding silence where memory breaks. Wellness hovers, undefined, a phantom breeze in the stillness. Rehabilitation spins into an endless loop, movements without direction, without past or future—just the now, suspended in something unseen.
-              </div>
+                We provide comprehensive medication management to ensure residents take their medications safely and on time. We coordinate with healthcare providers, monitor prescriptions, and administer medications according to personalized care plans. </div>
             </div>
             <div className="bg-[#016FA2] rounded-xl p-5 text-white">
               <div className="flex relative flex-row w-full rounded-xl overflow-hidden mb-4">
@@ -88,7 +87,7 @@ export default function Home() {
                 Memory Care
               </div>
               <div>
-                Palliative hums in the distance, a quiet presence that holds without touching, a gentle wave of nothingness meeting the horizon of long-term care. Boundaries blur, sky fades into sea, where the infinite holds all that has been forgotten, and in that space, care becomes everything yet nothing.
+                We support residents living with Alzheimer&apos;s, dementia, and other cognitive challenges. Daily routines are tailored to each resident’s needs, focusing on enhancing memory, reducing confusion, and fostering a sense of security.
               </div>
             </div>
 

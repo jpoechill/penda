@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from 'react';
 import localFont from "next/font/local";
+import { usePathname } from 'next/navigation'
 
 const bebas = localFont({
   src: "./fonts/BebasNeue-Regular.ttf",
@@ -12,6 +13,14 @@ const bebas = localFont({
 });
 
 export default function Header() {
+  const pathname = usePathname().split('/')[1]
+
+  // const [activeAbout, setActiveAbout] = useState(pathname === "about");
+  // const [activeServices, setActiveServices] = useState(false);
+  // const [activeFacilities, setActiveFacilities] = useState(false);
+  // const [activeContact, setActiveContact] = useState(false);
+  // const [activeSchedule, setActiveSchedule] = useState(false);
+
 
   const [showMenu, setShowMenu] = useState(false);
 
@@ -27,16 +36,16 @@ export default function Header() {
             </div>
             <div className="hidden lg:flex flex-row lg:items-center col-span-4 gap-10 text-lg">
               <div>
-                <Link href="/about" scroll={true}>About Us</Link>
+                <Link href="/about" className={`${pathname == 'about' ? 'text-[#016FA2] font-medium underline' : ''} hover:text-[#016FA2] hover:underline underline-offset-4`} scroll={true}>About Us</Link>
               </div>
               <div>
-                <Link href="/services" scroll={true}>Services</Link>
+                <Link href="/services" className={`${pathname == 'services' ? 'text-[#016FA2] font-medium underline' : ''} hover:text-[#016FA2] hover:underline underline-offset-4`} scroll={true}>Services</Link>
               </div>
               <div>
-                <Link href="/facilities" scroll={true}>Facilities</Link>
+                <Link href="/facilities" className={`${pathname == 'facilities' ? 'text-[#016FA2] font-medium underline' : ''} hover:text-[#016FA2] hover:underline underline-offset-4`} scroll={true}>Facilities</Link>
               </div>
               <div>
-                <Link href="/contact" scroll={true}>Contact</Link>
+                <Link href="/contact" className={`${pathname == 'contact' ? 'text-[#016FA2] font-medium underline' : ''} hover:text-[#016FA2] hover:underline underline-offset-4`} scroll={true}>Contact</Link>
               </div>
             </div>
             <div className="hidden lg:flex flex-row lg:items-center gap-10 text-lg col-span-3 text-right justify-end">
@@ -99,7 +108,7 @@ export default function Header() {
           </div>
         </div>
       }
-    </div>
+    </div >
 
 
   );

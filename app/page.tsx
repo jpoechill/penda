@@ -46,6 +46,70 @@ export default function Home() {
 
         <div className="flex justify-center w-full px-10 pb-4">
           <div className="flex flex-col w-full max-w-[1040px]">
+            <div className="grid lg:grid-rows-1 lg:grid-cols-2 gap-8">
+              <div className="w-full rounded-2xl border border-[#0089c8] overflow-hidden">
+                <div className={`p-5`}>
+                  <div className={`${bebas.className} flex items-center tracking-wider text-[22px] text-[#025176]`}>
+                    <div className="min-w-[20px] min-h-[20px] inline-block mr-3">
+                      <Image src="/svg/sofa.svg" alt="Group Photo" className="object-cover bg-cover bg-no-repeat" priority width={30} height={30}></Image>
+                    </div>
+                    Comfortable Living Spaces
+                  </div>
+                </div>
+              </div>
+              <div className="w-full rounded-2xl border border-[#0089c8] overflow-hidden">
+                <div className={`p-5`}>
+                  <div className={`${bebas.className} flex items-center tracking-wider text-[22px] text-[#025176]`}>
+                    <div className="min-w-[20px] min-h-[20px] inline-block mr-3">
+                      <Image src="/svg/wheelchair.svg" alt="Group Photo" className="object-cover bg-cover bg-no-repeat" priority width={30} height={30}></Image>
+                    </div>Comfortable Living Spaces
+                  </div>
+                </div>
+              </div>
+              <div className="w-full rounded-2xl border border-[#0089c8] overflow-hidden">
+                <div className={`p-5`}>
+                  <div className={`${bebas.className} flex items-center tracking-wider text-[22px] text-[#025176]`}>
+                    <div className="min-w-[20px] min-h-[20px] inline-block mr-3">
+                      <Image src="/svg/lock.svg" alt="Group Photo" className="object-cover bg-cover bg-no-repeat" priority width={24} height={24}></Image>
+                    </div>Comfortable Living Spaces
+                  </div>
+                </div>
+              </div>
+              <div className="w-full rounded-2xl border border-[#0089c8] overflow-hidden">
+                <div className={`p-5`}>
+                  <div className={`${bebas.className} flex items-center tracking-wider text-[22px] text-[#025176]`}>
+                    <div className="min-w-[20px] min-h-[20px] inline-block mr-3">
+                      <Image src="/svg/van.svg" alt="Group Photo" className="object-cover bg-cover bg-no-repeat" priority width={30} height={30}></Image>
+                    </div>Comfortable Living Spaces
+                  </div>
+                </div>
+              </div>
+              <div className="w-full rounded-2xl border border-[#0089c8] overflow-hidden">
+                <div className={`p-5`}>
+                  <div className={`${bebas.className} flex items-center tracking-wider text-[22px] text-[#025176]`}>
+                    <div className="min-w-[20px] min-h-[20px] inline-block mr-3">
+                      <Image src="/svg/pill.svg" alt="Group Photo" className="object-cover bg-cover bg-no-repeat" priority width={24} height={24}></Image>
+                    </div>Comfortable Living Spaces
+                  </div>
+                </div>
+              </div>
+              <div className="w-full rounded-2xl border border-[#0089c8] overflow-hidden">
+                <div className={`p-5`}>
+                  <div className={`${bebas.className} flex items-center tracking-wider text-[22px] text-[#025176]`}>
+                    <div className="min-w-[20px] min-h-[20px] inline-block mr-3">
+                      <Image src="/svg/brain.svg" alt="Group Photo" className="object-cover bg-cover bg-no-repeat" priority width={28} height={28}></Image>
+                    </div>
+                    Comfortable Living Spaces
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        {/* 
+        <div className="flex justify-center w-full px-10 pb-4">
+          <div className="flex flex-col w-full max-w-[1040px]">
             <div className="grid lg:grid-rows-1 lg:grid-cols-3 gap-8">
               <div className="w-full rounded-2xl min-h-[200px] border border-[#0089c8] overflow-hidden">
                 <div className={`p-5`}>
@@ -94,9 +158,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="flex justify-center w-full p-5 pt-0 px-10 mt-0 py-10">
+        {/* <div className="flex justify-center w-full p-5 pt-0 px-10 mt-0 py-10">
           <div className="flex flex-col w-full max-w-[1040px]">
             <div className="relative z-[-1] mt-10 ">
               <Image src="/img/landscape_02.jpg" alt="Group Photo" className="rounded-xl h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
@@ -105,7 +169,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+
       </div>
 
       <Footer></Footer>

@@ -10,7 +10,7 @@ const bebas = localFont({
 
 export default function Footer() {
   return (
-    <div className="flex flex-row justify-center mx-auto border w-full py-10 px-10 mt-10 text-white bg-[#016FA2]">
+    <div className="custom-bg flex flex-row justify-center mx-auto border w-full py-10 px-10 mt-10 text-white bg-[#016FA2]">
       <div className="w-full flex flex-col justify-center items-center">
         <div className="flex flex-col md:flex-row justify-between w-full max-w-[1040px]">
           <div>

@@ -19,10 +19,9 @@ export default function Home() {
         <div className="flex flex-col mt-[116px] justify-center items-center w-full pt-0 p-5 px-10 my-5">
           <div className="text-center w-full pb-2">
             <div className={`${bebas.className} text-[#025176] tracking-wider text-[24px]`}>
-              Facilities
+              Our Living Accommodations
             </div>
           </div>
-
           <div className="w-full mb-10">
             <Image src="/img/facilities/facil_01.jpg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
           </div>
