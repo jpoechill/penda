@@ -36,9 +36,14 @@ export default function Home() {
                 <Image src="/img/nurse_03.jpeg" alt="Group Photo" className="rounded-xl lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
               </div>
               <div className="col-span-5 p-5">
-                At Penda, our mission is to provide compassionate, personalized care that empowers individuals to live independently and with dignity in the comfort of their own homes.
+                Our mission at Penda Home is to embody the love and care that &apos;Penda&apos; represents.
+                We are committed to offering our clients a home-like experience, where respect, loyalty, and integrity are at the core of everything we do.
                 <br /><br />
-                We are dedicated to creating a safe, nurturing environment where each client’s physical, emotional, and social needs are met with respect and kindness. Our holistic approach to care ensures that every service is tailored to the unique preferences and requirements of our clients, fostering their well-being and happiness.
+                At Penda Home, we believe that genuine care comes from the heart, and we provide
+                personalized services that are carefully tailored to each person&apos;s specific requirements, ensuring the highest level of comfort and care.
+                {/* At Penda, our mission is to provide compassionate, personalized care that empowers individuals to live independently and with dignity in the comfort of their own homes. */}
+                <br /><br />
+                {/* We are dedicated to creating a safe, nurturing environment where each client’s physical, emotional, and social needs are met with respect and kindness. Our holistic approach to care ensures that every service is tailored to the unique preferences and requirements of our clients, fostering their well-being and happiness. */}
               </div>
             </div>
           </div>
@@ -62,7 +67,8 @@ export default function Home() {
                   <div className={`${bebas.className} flex items-center tracking-wider text-[22px] text-[#025176]`}>
                     <div className="min-w-[20px] min-h-[20px] inline-block mr-3">
                       <Image src="/svg/wheelchair.svg" alt="Group Photo" className="object-cover bg-cover bg-no-repeat" priority width={30} height={30}></Image>
-                    </div>Comfortable Living Spaces
+                    </div>
+                    Accessibility for All
                   </div>
                 </div>
               </div>
@@ -71,7 +77,8 @@ export default function Home() {
                   <div className={`${bebas.className} flex items-center tracking-wider text-[22px] text-[#025176]`}>
                     <div className="min-w-[20px] min-h-[20px] inline-block mr-3">
                       <Image src="/svg/lock.svg" alt="Group Photo" className="object-cover bg-cover bg-no-repeat" priority width={24} height={24}></Image>
-                    </div>Comfortable Living Spaces
+                    </div>
+                    Safety and Security
                   </div>
                 </div>
               </div>
@@ -80,7 +87,8 @@ export default function Home() {
                   <div className={`${bebas.className} flex items-center tracking-wider text-[22px] text-[#025176]`}>
                     <div className="min-w-[20px] min-h-[20px] inline-block mr-3">
                       <Image src="/svg/van.svg" alt="Group Photo" className="object-cover bg-cover bg-no-repeat" priority width={30} height={30}></Image>
-                    </div>Comfortable Living Spaces
+                    </div>
+                    Transportation Services
                   </div>
                 </div>
               </div>
@@ -89,7 +97,8 @@ export default function Home() {
                   <div className={`${bebas.className} flex items-center tracking-wider text-[22px] text-[#025176]`}>
                     <div className="min-w-[20px] min-h-[20px] inline-block mr-3">
                       <Image src="/svg/pill.svg" alt="Group Photo" className="object-cover bg-cover bg-no-repeat" priority width={24} height={24}></Image>
-                    </div>Comfortable Living Spaces
+                    </div>
+                    Medication Management
                   </div>
                 </div>
               </div>
@@ -99,7 +108,7 @@ export default function Home() {
                     <div className="min-w-[20px] min-h-[20px] inline-block mr-3">
                       <Image src="/svg/brain.svg" alt="Group Photo" className="object-cover bg-cover bg-no-repeat" priority width={28} height={28}></Image>
                     </div>
-                    Comfortable Living Spaces
+                    Memory Care
                   </div>
                 </div>
               </div>

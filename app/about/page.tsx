@@ -24,7 +24,7 @@ export default function Home() {
           </div>
 
           <div className="w-full mb-10 max-w-[1040px] overflow-hidden">
-            <Image src="/img/about_04.jpg" alt="Group Photo" className="rounded-2xl h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
+            <Image src="/img/about_04.png" alt="Group Photo" className="rounded-2xl h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 max-w-[1040px]">
@@ -33,10 +33,14 @@ export default function Home() {
               <div className={`${bebas.className} text-[#025176] tracking-wider text-[22px] mb-5`}>
                 About Us
               </div>
-              Located in Maricopa, Arizona, we are a small private home dedicated to providing personalized care in a warm and welcoming environment.
+
+              Located in Maricopa, Arizona, we are a small private home dedicated to providing personalized care in a warm and welcoming environment. With over 10 years of experience, our compassionate caregivers specialize in delivering professional support tailored to meet the unique needs of each resident.
+              <br /><br />
+              We focus on offering specialized care services for seniors, empowering them to actively plan and manage their own long-term care, ensuring a comfortable and fulfilling living experience.
+              {/* Located in Maricopa, Arizona, we are a small private home dedicated to providing personalized care in a warm and welcoming environment.
               <br /><br />
               With over 10 years of experience, our compassionate caregivers are committed to delivering professional support tailored to meet the unique needs of each resident.
-              <br /><br />
+              <br /><br /> */}
               {/* We prioritize comfort and safety, ensuring that everyone feels at home while receiving the highest quality of care. */}
             </div>
 
@@ -45,9 +49,14 @@ export default function Home() {
               <div className={`${bebas.className} text-[#025176] tracking-wider text-[22px] mb-5`}>
                 Our Story
               </div>
-              In addition, we offer specialized amenities such as a fitness center, therapy rooms, and a wellness program to support the physical health of our residents.
+              Penda Home Care began as a response to the lack of personal connection often seen in large care facilities. The founders, driven by their own experiences with elderly loved ones, wanted to create a more intimate and nurturing environment.
               <br /><br />
-              Whether enjoying a quiet moment in our gardens or participating in group activities, Penda Assisted Living is designed to enrich daily life, allowing residents to thrive in a nurturing and secure environment.
+              They envisioned a home where seniors wouldn&apos;t just be cared for physically but where their emotional well-being and personal preferences were prioritized.
+              With a commitment to personalized care, Penda Home Care set out to redefine elder care.
+
+              {/* What makes Penda unique is its focus on empowering seniors to take an active role in planning their own long-term care. The team believes that every resident deserves to feel valued and understood. By offering specialized services and fostering a warm, supportive atmosphere, Penda Home Care provides a place where seniors can live with dignity, comfort, and independence. */}
+
+
             </div>
 
             <div className="w-full max-w-[1040px]">
@@ -66,7 +75,8 @@ export default function Home() {
               </div>
               At the heart of our community lies a commitment to compassion, respect, and excellence. We believe in treating every resident with dignity and fostering an environment where they feel valued and empowered.
               <br /><br />
-              We are dedicated to creating a safe, inclusive atmosphere that promotes independence while enhancing the quality of life for all. Together, we strive to build a nurturing community where everyone can thrive.
+              We are dedicated to creating a safe, inclusive atmosphere that promotes independence while enhancing the quality of life for all.
+              Together, we strive to build a nurturing community where everyone can thrive.
             </div>
 
 
