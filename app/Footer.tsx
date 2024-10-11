@@ -51,7 +51,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row mt-10 pt-0 md:pt-0 justify-between w-full max-w-[1040px]">
           <div>
             <Link href="/">
-              <Image src="/logo_on_dark_02.png" alt="Logo Basic" width={250} height={300}></Image>
+              <Image src="/logo_full_on_dark.png" alt="Logo Basic" width={170} height={300}></Image>
             </Link>
           </div>
           <div className="md:text-right mt-10 md:mt-0 flex flex-col justify-end align-end">

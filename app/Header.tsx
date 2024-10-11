@@ -26,12 +26,12 @@ export default function Header() {
 
   return (
     <div>
-      <div className="fixed bg-white flex justify-center w-full z-[10] top-0 border-b py-4 lg:pt-4 lg:p-3 px-10 ">
+      <div className="fixed bg-white flex justify-center w-full z-[10] top-0 border-b py-0 lg:pt-2 lg:p-3 px-10 ">
         <div className="flex flex-row justify-between w-full max-w-[1040px]">
           <div className="grid md:grid-cols-10 grid-cols-4 w-full justify-between lg:items-center">
-            <div className="flex flex-row gap-4 mt-0 mb-2 col-span-3">
-              <Link href="/" className="flex flex-row gap-3 items-center">
-                <Image src="/logo_02.png" alt="Top Logo" width={130} height={20}></Image>
+            <div className="flex flex-row gap-4 mt-0 mb-0 col-span-3">
+              <Link href="/" className="flex my-2 mt-3 flex-row gap-3 items-center">
+                <Image src="/logo_full_on_white.svg" alt="Top Logo" width={200} height={20}></Image>
               </Link>
             </div>
             <div className="hidden lg:flex flex-row lg:items-center col-span-4 gap-10 text-lg">
