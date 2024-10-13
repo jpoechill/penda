@@ -26,17 +26,17 @@ export default function Header() {
 
   return (
     <div>
-      <div className="fixed bg-white flex justify-center w-full z-[10] top-0 border-b py-0 lg:pt-2 lg:p-3 px-10 ">
+      <div className="fixed bg-[#ffffff] flex justify-center w-full z-[10] top-0 border-b py-0 lg:pt-2 lg:p-3 px-10 ">
         <div className="flex flex-row justify-between w-full max-w-[1040px]">
-          <div className="grid md:grid-cols-10 grid-cols-4 w-full justify-between lg:items-center">
+          <div className="grid md:grid-cols-12 grid-cols-4 w-full justify-between lg:items-center">
             <div className="flex flex-row gap-4 mt-0 mb-0 col-span-3">
               <Link href="/" className="flex my-2 mt-3 flex-row gap-3 items-center">
-                <Image src="/logo_full_on_white.svg" alt="Top Logo" width={200} height={20}></Image>
+                <Image src="/logo_full_on_white_clr.png" alt="Top Logo" width={215} height={20}></Image>
               </Link>
             </div>
-            <div className="hidden lg:flex flex-row lg:items-center col-span-4 gap-10 text-lg">
+            <div className="hidden lg:flex flex-row lg:items-center justify-start col-span-6 gap-10 text-lg">
               <div>
-                <Link href="/about" className={`${pathname == 'about' ? 'text-[#016FA2] font-medium underline' : ''} hover:text-[#016FA2] hover:underline underline-offset-4`} scroll={true}>About Us</Link>
+                <Link href="/about" className={`${pathname == 'about' ? 'text-[#016FA2] font-medium underline' : ''} hover:text-[#016FA2] hover:underline underline-offset-4`} scroll={true}>About</Link>
               </div>
               <div>
                 <Link href="/services" className={`${pathname == 'services' ? 'text-[#016FA2] font-medium underline' : ''} hover:text-[#016FA2] hover:underline underline-offset-4`} scroll={true}>Services</Link>
@@ -45,18 +45,22 @@ export default function Header() {
                 <Link href="/facilities" className={`${pathname == 'facilities' ? 'text-[#016FA2] font-medium underline' : ''} hover:text-[#016FA2] hover:underline underline-offset-4`} scroll={true}>Facilities</Link>
               </div>
               <div>
+                <Link href="/testimonials" className={`${pathname == 'testimonials' ? 'text-[#016FA2] font-medium underline' : ''} hover:text-[#016FA2] hover:underline underline-offset-4`} scroll={true}>Testimonials</Link>
+              </div>
+              <div>
                 <Link href="/contact" className={`${pathname == 'contact' ? 'text-[#016FA2] font-medium underline' : ''} hover:text-[#016FA2] hover:underline underline-offset-4`} scroll={true}>Contact</Link>
               </div>
+
             </div>
             <div className="hidden lg:flex flex-row lg:items-center gap-10 text-lg col-span-3 text-right justify-end">
               <div className="flex flex-row">
                 <Link href="/schedule">
-                  <div className={`${bebas.className} flex flex-row text-[20px] mr-5 items-center justify-center tracking-wider border-2 border-[#016FA2] shadow-xl text-lg rounded-full text-[#016FA2] hover:bg-[#016FA2] hover:text-white py-2 px-5 ml-1`}>
-                    Schedule a Tour
+                  <div className={`${bebas.className} flex flex-row text-[20px] items-center justify-center tracking-wider border-2 border-[#016FA2] shadow-xl text-lg rounded-full text-[#016FA2] hover:bg-[#016FA2] hover:text-white mr-2 py-2 px-4 ml-1`}>
+                    Schedule Tour
                   </div>
                 </Link>
                 <Link href="tel:5555555555">
-                  <div className={`${bebas.className} flex flex-row text-[20px] items-center justify-center tracking-wider border-2 border-[#016FA2] shadow-xl text-lg rounded-full text-[#016FA2] hover:bg-[#016FA2] hover:text-white py-2 px-5 ml-1`}>
+                  <div className={`${bebas.className} flex flex-row text-[20px] items-center justify-center tracking-wider border-2 border-[#016FA2] shadow-xl text-lg rounded-full text-[#016FA2] hover:bg-[#016FA2] hover:text-white py-2 px-4 ml-1`}>
                     Call Now
                   </div>
                 </Link>

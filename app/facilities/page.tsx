@@ -12,12 +12,12 @@ const bebas = localFont({
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-[#f1fff1]">
       <Header></Header>
 
       <div className="animate-[fade-me-in_.5s_ease-in-out]">
-        <div className="flex flex-col mt-[116px] justify-center items-center w-full pt-0 p-5 px-10 my-5">
-          <div className="text-center w-full pb-2">
+        <div className="flex flex-col mt-[100px] justify-center items-center w-full pt-0 p-5 px-10 my-5">
+          <div className="text-center mt-[16px] w-full pb-2">
             <div className={`${bebas.className} text-[#025176] tracking-wider text-[24px]`}>
               Our Living Accommodations
             </div>
@@ -36,11 +36,11 @@ export default function Home() {
             <Image src="/img/facilities/facil_01.jpg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
           </div>
 
-          <div className="w-full max-w-[1040px] mb-10">
+          {/* <div className="w-full max-w-[1040px] mb-10">
             Safety and well-being are our top priorities. Our facility features 24/7 security, emergency call systems in each room, and easily accessible layouts to ensure peace of mind for both residents and their families.
             <br /><br />
             In addition, we offer specialized amenities such as a fitness center, therapy rooms, and a wellness program to support the physical health of our residents. Whether enjoying a quiet moment in our gardens or participating in group activities, Penda Assisted Living is designed to enrich daily life, allowing residents to thrive in a nurturing and secure environment.
-          </div>
+          </div> */}
 
           <div className="w-full grid grid-cols-2 gap-8 max-w-[1040px]">
             <div>
@@ -48,7 +48,7 @@ export default function Home() {
             </div>
             <div className="grid grid-rows-2">
               <Image src="/img/facilities/facil_04.jpg" alt="Group Photo" className="w-full " priority width={1200} height={500}></Image>
-              <Image src="/img/facilities/facil_04.jpg" alt="Group Photo" className="w-full " priority width={1200} height={500}></Image>
+              <Image src="/img/facilities/facil_05.jpg" alt="Group Photo" className="w-full " priority width={1200} height={500}></Image>
             </div>
           </div>
 

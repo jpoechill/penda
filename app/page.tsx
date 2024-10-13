@@ -33,7 +33,7 @@ export default function Home() {
           <div className="flex flex-row w-full max-w-[1040px]">
             <div className="w-full overflow-hidden  grid md:grid-cols-6 grid-cols-1">
               <div className="col-span-1 p-5 pl-0">
-                <Image src="/img/nurse_03.jpeg" alt="Group Photo" className="rounded-xl lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
+                <Image src="/img/nurse_04.jpeg" alt="Group Photo" className="rounded-xl lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
               </div>
               <div className="col-span-5 p-5">
                 Our mission at Penda Home is to embody the love and care that &apos;Penda&apos; represents.

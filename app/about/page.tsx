@@ -12,12 +12,12 @@ const bebas = localFont({
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-[#fdf8ff]">
       <Header></Header>
 
       <div className="animate-[fade-me-in_.5s_ease-in-out]">
-        <div className="flex flex-col mt-[116px] justify-center items-center w-full pt-0 p-5 px-10 my-5">
-          <div className="text-center w-full pb-2">
+        <div className="flex flex-col mt-[100px] justify-center items-center w-full pt-0 p-5 px-10 my-5">
+          <div className="text-center mt-[16px] w-full pb-2">
             <div className={`${bebas.className} text-[#025176] tracking-wider text-[22px]`}>
               Who We Are
             </div>
