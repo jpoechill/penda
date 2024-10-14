@@ -12,7 +12,7 @@ const bebas = localFont({
 
 export default function Home() {
   return (
-    <main className="bg-[#f1fff1]">
+    <main className="bg-[#f8fff8]">
       <Header></Header>
 
       <div className="animate-[fade-me-in_.5s_ease-in-out]">
