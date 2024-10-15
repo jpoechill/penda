@@ -16,7 +16,6 @@ export default function Footer() {
           <div>
             40968 W. Portis Drive, Maricopa, AZ 85138 <br />
             <span className="font-bold">PH</span> (520) 457-7645 | <span className="font-bold">FX</span> (520) 423-3363
-
             <br /><br />
           </div>
           <div className="flex flex-col justify-end pt-8 md:pt-0 align-bottom">
@@ -38,7 +37,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex flex-row text-right pt-5 md:justify-end">
-              <Link href="/quote" className="w-full md:w-fit">
+              <Link href="/schedule" className="w-full md:w-fit">
                 <div className={`${bebas.className} flex text-[20px] mr-5 items-center justify-center tracking-wider border-2 border-white text-white shadow-xl hover:bg-white hover:text-[#016FA2] text-lg rounded-full py-2 px-5 ml-1`}>
                   Schedule a Tour
                 </div>
