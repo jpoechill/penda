@@ -20,7 +20,7 @@ export default function Footer() {
             <br /><br />
           </div>
           <div className="flex flex-col justify-end pt-8 md:pt-0 align-bottom">
-            <div className="flex flex-row gap-6">
+            <div className="flex flex-row gap-4">
               <div>
                 <Link href="/about">About Us</Link>
               </div>
@@ -29,6 +29,9 @@ export default function Footer() {
               </div>
               <div>
                 <Link href="/facilities">Facilities</Link>
+              </div>
+              <div>
+                <Link href="/testimonials">Testimonials</Link>
               </div>
               <div>
                 <Link href="/contact">Contact</Link>
@@ -48,18 +51,19 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row mt-10 pt-0 md:pt-0 justify-between w-full max-w-[1040px]">
-          <div>
+        <div className="flex flex-col md:flex-row mt-10 pt-0 md:pt-0 justify-center md:justify-between w-full max-w-[1040px]">
+          <div className="w-full flex justify-center md:justify-start">
             <Link href="/">
-              <Image src="/logo_full_on_dark.png" alt="Logo Basic" width={170} height={300}></Image>
+              <Image src="/logo_full_on_dark_clr.png" alt="Logo Basic" width={170} height={300}></Image>
             </Link>
           </div>
-          <div className="md:text-right mt-10 md:mt-0 flex flex-col justify-end align-end">
-            <div>
+          <div className="md:text-right mt-10 md:mt-0 flex w-full text-center flex-col justify-end align-end">
+            <div className="flex w-full justify-center md:justify-end">
               <Image src="/social-facebook.svg" className="inline mr-7" alt="Facebook Logo" width={40} height={30}></Image>
               <Image src="/social-instagram.svg" className="inline" alt="Instagram Logo" width={40} height={30}></Image>
               <br /><br />
             </div>
+            <br />
             Penda Assisted Living © 2024
           </div>
         </div>

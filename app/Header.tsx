@@ -102,6 +102,12 @@ export default function Header() {
                 Facilities
               </div>
             </Link>
+            <hr />
+            <Link href="/testimonials">
+              <div>
+                Testimonials
+              </div>
+            </Link>
             <hr /><Link href="/contact">
               <div>
                 Contact

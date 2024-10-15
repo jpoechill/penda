@@ -16,8 +16,8 @@ export default function Home() {
       <Header></Header>
 
       <div className="animate-[fade-me-in_.5s_ease-in-out]">
-        <div className="flex flex-col mt-[100px] justify-center items-center w-full pt-0 p-5 px-10">
-          <div className="text-center w-full pb-2 mt-[16px]">
+        <div className="flex flex-col mt-[0px] justify-center items-center w-full pt-0 p-5 px-10">
+          <div className="text-center w-full pb-2 mt-[116px]">
             <div className={`${bebas.className} text-[#025176] tracking-wider text-[24px]`}>
               Our Wellness Solutions
             </div>
