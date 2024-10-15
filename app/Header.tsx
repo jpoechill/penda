@@ -28,7 +28,7 @@ export default function Header() {
     <div>
       <div className="fixed bg-[#ffffff] flex justify-center w-full z-[10] top-0 border-b py-0 lg:pt-2 lg:p-3 px-10 ">
         <div className="flex flex-row justify-between w-full max-w-[1040px]">
-          <div className="grid md:grid-cols-12 grid-cols-4 w-full justify-between lg:items-center">
+          <div className="grid lg:grid-cols-12 grid-cols-4 w-full justify-between lg:items-center">
             <div className="flex flex-row gap-4 mt-0 mb-0 col-span-3">
               <Link href="/" className="flex my-2 mt-3 flex-row gap-3 items-center">
                 <Image src="/logo_full_on_white_clr.png" alt="Top Logo" width={215} height={20}></Image>
