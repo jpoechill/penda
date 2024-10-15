@@ -117,7 +117,7 @@ export default function Header() {
           </div >
           <div>
             <Link href="/schedule" className="flex mt-5">
-              <div className="bg-[#0062CC] shadow-xl text-lg rounded-full w-full text-center text-white py-2 px-8 ml-1">
+              <div className="bg-[#016FA2] shadow-xl font-bold text-lg rounded-full w-full text-center text-white py-2 px-8 ml-1">
                 Schedule a Tour
               </div>
             </Link>
