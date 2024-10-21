@@ -23,7 +23,7 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full mb-10">
-            <Image src="/img/facilities/facil_02.jpg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
+            <Image src="/photography/bedroom_01.jpg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
           </div>
 
           <div className="w-full max-w-[1040px] mb-10">
@@ -33,7 +33,7 @@ export default function Home() {
           </div>
 
           <div className="w-full mb-10">
-            <Image src="/img/facilities/facil_01.jpg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
+            <Image src="/photography/bedroom_02.jpg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
           </div>
 
           {/* <div className="w-full max-w-[1040px] mb-10">
@@ -44,11 +44,11 @@ export default function Home() {
 
           <div className="w-full grid grid-cols-2 gap-8 max-w-[1040px]">
             <div>
-              <Image src="/img/facilities/facil_03.jpg" alt="Group Photo" className="w-full " priority width={1200} height={500}></Image>
+              <Image src="/photography/living_01.jpg" alt="Group Photo" className="w-full " priority width={1200} height={500}></Image>
+              <Image src="/photography/living_02.jpg" alt="Group Photo" className="w-full mt-9" priority width={1200} height={500}></Image>
             </div>
             <div className="grid grid-rows-2">
-              <Image src="/img/facilities/facil_04.jpg" alt="Group Photo" className="w-full " priority width={1200} height={500}></Image>
-              <Image src="/img/facilities/facil_05.jpg" alt="Group Photo" className="w-full " priority width={1200} height={500}></Image>
+              <Image src="/photography/living_03.jpg" alt="Group Photo" className="w-full " priority width={1200} height={500}></Image>
             </div>
           </div>
 

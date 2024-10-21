@@ -30,8 +30,8 @@ export default function Header() {
         <div className="flex flex-row justify-between w-full max-w-[1040px]">
           <div className="grid lg:grid-cols-12 grid-cols-4 w-full justify-between lg:items-center">
             <div className="flex flex-row gap-4 mt-0 mb-0 col-span-3">
-              <Link href="/" className="flex my-2 mt-3 flex-row gap-3 items-center">
-                <Image src="/logo_full_on_white_clr.png" alt="Top Logo" width={215} height={20}></Image>
+              <Link href="/" className="flex my-2 mt-2 flex-row gap-3 items-center">
+                <Image src="/logo_full_on_white_clr_03.png" alt="Top Logo" width={230} height={20}></Image>
               </Link>
             </div>
             <div className="hidden lg:flex flex-row lg:items-center justify-start col-span-6 gap-10 text-lg">
