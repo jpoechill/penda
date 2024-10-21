@@ -25,7 +25,7 @@ export default function Home() {
 
 
             <div className="w-full mb-5 max-w-[1040px] overflow-hidden">
-              <Image src="/img/landscape.jpg" alt="Group Photo" className="rounded-2xl h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
+              <Image src="/img/landscape_02.jpg" alt="Group Photo" className="rounded-2xl h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
             </div>
 
             <div className="pt-4 text-left">
