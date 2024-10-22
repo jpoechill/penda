@@ -81,13 +81,15 @@ export default function Home() {
             </div>
             <div className="bg-[#016FA2] rounded-xl p-5 text-white">
               <div className="flex relative flex-row w-full rounded-xl overflow-hidden mb-4">
-                <Image src="/img/brain.jpeg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
+                <Image src="/img/cook.jpeg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
               </div>
               <div className={`${bebas.className} text-white text-[24px] pb-2`}>
-                Memory Care
+                {/* Memory Care */}
+                Full-Time Cook
               </div>
               <div>
-                We support residents living with Alzheimer&apos;s, dementia, and other cognitive challenges. Daily routines are tailored to each resident’s needs, focusing on enhancing memory, reducing confusion, and fostering a sense of security.
+                Specializing in dietary needs, we offer heart-healthy, low-sodium, diabetic-friendly, and customized meal options. Our kitchen creates a warm, home-like dining experience where residents enjoy fresh, balanced meals that support their well-being.
+                {/* We support residents living with Alzheimer&apos;s, dementia, and other cognitive challenges. Daily routines are tailored to each resident’s needs, focusing on enhancing memory, reducing confusion, and fostering a sense of security. */}
               </div>
             </div>
 
