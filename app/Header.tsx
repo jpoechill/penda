@@ -34,7 +34,7 @@ export default function Header() {
                 <Image src="/logo_full_on_white_clr_03.png" alt="Top Logo" width={230} height={20}></Image>
               </Link>
             </div>
-            <div className="hidden lg:flex flex-row lg:items-center justify-start col-span-6 gap-10 text-lg">
+            <div className="hidden lg:flex flex-row lg:items-center justify-end col-span-7 gap-10 text-lg">
               <div>
                 <Link href="/about" className={`${pathname == 'about' ? 'text-[#016FA2] font-medium underline' : ''} hover:text-[#016FA2] hover:underline underline-offset-4`} scroll={true}>About</Link>
               </div>
@@ -50,17 +50,16 @@ export default function Header() {
               <div>
                 <Link href="/contact" className={`${pathname == 'contact' ? 'text-[#016FA2] font-medium underline' : ''} hover:text-[#016FA2] hover:underline underline-offset-4`} scroll={true}>Contact</Link>
               </div>
-
             </div>
-            <div className="hidden lg:flex flex-row lg:items-center gap-10 text-lg col-span-3 text-right justify-end">
+            <div className="hidden lg:flex flex-row lg:items-center gap-10 text-lg col-span-2 text-right justify-end">
               <div className="flex flex-row">
-                <Link href="/schedule">
+                {/* <Link href="/schedule">
                   <div className={`${bebas.className} flex flex-row text-[20px] items-center justify-center tracking-wider border-2 border-[#016FA2] shadow-xl text-lg rounded-full text-[#016FA2] hover:bg-[#016FA2] hover:text-white mr-2 py-2 px-4 ml-1`}>
                     Schedule Tour
                   </div>
-                </Link>
-                <Link href="tel:5555555555">
-                  <div className={`${bebas.className} flex flex-row text-[20px] items-center justify-center tracking-wider border-2 border-[#016FA2] shadow-xl text-lg rounded-full text-[#016FA2] hover:bg-[#016FA2] hover:text-white py-2 px-4 ml-1`}>
+                </Link> */}
+                <Link href="tel:5204233363">
+                  <div className={`${bebas.className} flex flex-row text-[20px] items-center justify-center tracking-wider border-2 border-[#016FA2] shadow-xl text-lg rounded-full text-[#016FA2] hover:bg-[#016FA2] hover:text-white py-2 px-8 ml-1`}>
                     Call Now
                   </div>
                 </Link>
@@ -116,9 +115,9 @@ export default function Header() {
             <hr />
           </div >
           <div>
-            <Link href="/schedule" className="flex mt-5">
+            <Link href="tel:5204233363" className="flex mt-5">
               <div className="bg-[#016FA2] shadow-xl font-bold text-lg rounded-full w-full text-center text-white py-2 px-8 ml-1">
-                Schedule a Tour
+                Call Now
               </div>
             </Link>
           </div>

@@ -37,12 +37,12 @@ export default function Footer() {
               </div>
             </div>
             <div className="flex flex-row text-right pt-5 md:justify-end">
-              <Link href="/schedule" className="w-full md:w-fit">
+              {/* <Link href="/schedule" className="w-full md:w-fit">
                 <div className={`${bebas.className} flex text-[20px] mr-5 items-center justify-center tracking-wider border-2 border-white text-white shadow-xl hover:bg-white hover:text-[#016FA2] text-lg rounded-full py-2 px-5 ml-1`}>
                   Schedule a Tour
                 </div>
-              </Link>
-              <Link href="tel:5555555555" className="w-full md:w-fit">
+              </Link> */}
+              <Link href="tel:5204233363" className="w-full md:w-fit">
                 <div className={`${bebas.className} flex text-[20px] mr-5 items-center justify-center tracking-wider border-2 border-white text-white shadow-xl hover:bg-white hover:text-[#016FA2] text-lg rounded-full py-2 px-5 ml-1`}>
                   Call now
                 </div>

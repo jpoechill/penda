@@ -26,7 +26,7 @@ export default function Home() {
 
             <div className="bg-white border-[1px] border-[#016FA2] rounded-xl p-5">
               <div className="flex relative flex-row w-full rounded-xl overflow-hidden mb-4">
-                <Image src="/img/cozy_03.jpeg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
+                <Image src="/img/cozy_04.jpg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
               </div>
               <div className={`${bebas.className} text-[#016FA2] text-[24px] pb-2`}>
                 Comfortable Living Spaces
