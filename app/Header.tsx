@@ -44,9 +44,9 @@ export default function Header() {
               <div>
                 <Link href="/facilities" className={`${pathname == 'facilities' ? 'text-[#016FA2] font-medium underline' : ''} hover:text-[#016FA2] hover:underline underline-offset-4`} scroll={true}>Facilities</Link>
               </div>
-              <div>
+              {/* <div>
                 <Link href="/testimonials" className={`${pathname == 'testimonials' ? 'text-[#016FA2] font-medium underline' : ''} hover:text-[#016FA2] hover:underline underline-offset-4`} scroll={true}>Testimonials</Link>
-              </div>
+              </div> */}
               <div>
                 <Link href="/contact" className={`${pathname == 'contact' ? 'text-[#016FA2] font-medium underline' : ''} hover:text-[#016FA2] hover:underline underline-offset-4`} scroll={true}>Contact</Link>
               </div>
@@ -102,11 +102,11 @@ export default function Header() {
               </div>
             </Link>
             <hr />
-            <Link href="/testimonials">
+            {/* <Link href="/testimonials">
               <div>
                 Testimonials
               </div>
-            </Link>
+            </Link> */}
             <hr /><Link href="/contact">
               <div>
                 Contact
