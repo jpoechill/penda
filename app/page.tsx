@@ -20,7 +20,7 @@ export default function Home() {
           <div className="flex relative flex-row w-full max-w-[1040px] rounded-xl overflow-hidden mt-[120px] shadow-xl">
             <Image src="/img/cover_03.jpg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
             <div className="flex items-center justify-center absolute bottom-0 text-[40px] font-['Georgia'] italic bg-black bg-opacity-50 text-center text-white w-full p-5 mb-10">
-              Your Home Away from Home
+              Where Comfort Feels Like Home
             </div>
           </div>
         </div>
@@ -32,10 +32,10 @@ export default function Home() {
           </div>
           <div className="flex flex-row w-full max-w-[1040px]">
             <div className="w-full overflow-hidden  grid md:grid-cols-6 grid-cols-1">
-              <div className="col-span-1 p-5 pl-0">
+              {/* <div className="col-span-1 p-5 pl-0">
                 <Image src="/img/home_01.jpeg" alt="Group Photo" className="rounded-xl lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
-              </div>
-              <div className="col-span-5 p-5">
+              </div> */}
+              <div className="col-span-6 p-5">
                 Our mission at Penda Home is to embody the love and care that &apos;Penda&apos; represents.
                 We are committed to offering our clients a home-like experience, where respect, loyalty, and integrity are at the core of everything we do.
                 <br /><br />

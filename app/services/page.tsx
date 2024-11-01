@@ -85,7 +85,7 @@ export default function Home() {
               </div>
               <div className={`${bebas.className} text-white text-[24px] pb-2`}>
                 {/* Memory Care */}
-                Full-Time Cook
+                Prepared Meals
               </div>
               <div>
                 Specializing in dietary needs, we offer heart-healthy, low-sodium, diabetic-friendly, and customized meal options. Our kitchen creates a warm, home-like dining experience where residents enjoy fresh, balanced meals that support their well-being.
