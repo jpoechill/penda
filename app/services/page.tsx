@@ -37,7 +37,7 @@ export default function Home() {
             </div>
             <div className="bg-[#016FA2] rounded-xl p-5 text-white">
               <div className="flex relative flex-row w-full rounded-xl overflow-hidden mb-4">
-                <Image src="/img/accessibility_02.jpeg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
+                <Image src="/img/accessibility_03.jpg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
               </div>
               <div className={`${bebas.className} text-[24px] pb-2`}>
                 Accessibility for All
