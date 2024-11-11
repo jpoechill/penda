@@ -58,8 +58,12 @@ export default function Footer() {
           </div>
           <div className="md:text-right mt-10 md:mt-0 flex w-full text-center flex-col justify-end align-end">
             <div className="flex w-full justify-center md:justify-end">
-              <Image src="/social-facebook.svg" className="inline mr-7" alt="Facebook Logo" width={40} height={30}></Image>
-              <Image src="/social-instagram.svg" className="inline" alt="Instagram Logo" width={40} height={30}></Image>
+              <Link target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=61568741845327">
+                <Image src="/social-facebook.svg" className="inline mr-7" alt="Facebook Logo" width={40} height={30}></Image>
+              </Link>
+              <Link target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/pendahomecare">
+                <Image src="/social-instagram.svg" className="inline" alt="Instagram Logo" width={40} height={30}></Image>
+              </Link>
               <br /><br />
             </div>
             <br />

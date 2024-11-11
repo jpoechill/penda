@@ -32,9 +32,9 @@ export default function Home() {
             From spacious private and semi-private rooms to beautifully landscaped outdoor areas, every detail of our living spaces promotes both comfort and accessibility. Our common areas, including cozy lounges, dining spaces, and activity rooms, encourage social interaction and engagement, making our residents feel truly at home.
           </div>
 
-          <div className="w-full mb-10">
+          {/* <div className="w-full mb-10">
             <Image src="/photography/bedroom_02.jpg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
-          </div>
+          </div> */}
 
           {/* <div className="w-full max-w-[1040px] mb-10">
             Safety and well-being are our top priorities. Our facility features 24/7 security, emergency call systems in each room, and easily accessible layouts to ensure peace of mind for both residents and their families.
@@ -42,13 +42,14 @@ export default function Home() {
             In addition, we offer specialized amenities such as a fitness center, therapy rooms, and a wellness program to support the physical health of our residents. Whether enjoying a quiet moment in our gardens or participating in group activities, Penda Assisted Living is designed to enrich daily life, allowing residents to thrive in a nurturing and secure environment.
           </div> */}
 
-          <div className="w-full grid grid-cols-2 gap-8 max-w-[1040px]">
+          <div className="w-full grid grid-cols-2 gap-8 max-w-[1040px] mb-6">
             <div>
               <Image src="/photography/living_01.jpg" alt="Group Photo" className="w-full " priority width={1200} height={500}></Image>
               <Image src="/photography/living_02.jpg" alt="Group Photo" className="w-full mt-9" priority width={1200} height={500}></Image>
             </div>
-            <div className="grid grid-rows-2">
-              <Image src="/photography/living_03.jpg" alt="Group Photo" className="w-full " priority width={1200} height={500}></Image>
+            <div>
+              <Image src="/img/two_beds.jpg" alt="Group Photo" className="w-full " priority width={1200} height={500}></Image>
+              <Image src="/photography/living_03.jpg" alt="Group Photo" className="w-full mt-9" priority width={1200} height={500}></Image>
             </div>
           </div>
 

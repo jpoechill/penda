@@ -34,7 +34,7 @@ export default function Home() {
                 About Us
               </div>
 
-              Located in Maricopa, Arizona, we are a small private home dedicated to providing personalized care in a warm and welcoming environment. With over 10 years of experience, our compassionate caregivers specialize in delivering professional support tailored to meet the unique needs of each resident.
+              Located in Maricopa, Arizona, we are a small private home dedicated to providing personalized care in a warm and welcoming environment. Our compassionate caregivers specialize in delivering professional support tailored to meet the unique needs of each resident.
               <br /><br />
               We focus on offering specialized care services for seniors, empowering them to actively plan and manage their own long-term care, ensuring a comfortable and fulfilling living experience.
               {/* Located in Maricopa, Arizona, we are a small private home dedicated to providing personalized care in a warm and welcoming environment.
