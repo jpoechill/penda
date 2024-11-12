@@ -67,7 +67,7 @@ export default function Footer() {
               <br /><br />
             </div>
             <br />
-            Penda Assisted Living © 2024
+            Penda Home Care © 2024
           </div>
         </div>
       </div>

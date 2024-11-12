@@ -32,7 +32,7 @@ export default function Home() {
                 Comfortable Living Spaces
               </div>
               <div>
-                Our facility is thoughtfully designed to accommodate residents with varying mobility needs. With wide hallways, grab bars, and wheelchair-friendly entrances, everyone can navigate their home with ease.
+                We prioritize creating comfortable living spaces that feel like home. Each room is thoughtfully designed to balance privacy with accessibility, offering cozy furnishings, personalized touches, and ample natural light.
               </div>
             </div>
             <div className="bg-[#016FA2] rounded-xl p-5 text-white">

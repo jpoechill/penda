@@ -36,10 +36,10 @@ export default function Home() {
                 <Image src="/img/home_01.jpeg" alt="Group Photo" className="rounded-xl lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
               </div> */}
               <div className="col-span-6 p-5">
-                Our mission at Penda Home is to embody the love and care that &apos;Penda&apos; represents.
+                Our mission at Penda is to embody the love and care that &apos;Penda&apos; represents.
                 We are committed to offering our clients a home-like experience, where respect, loyalty, and integrity are at the core of everything we do.
                 <br /><br />
-                At Penda Home, we believe that genuine care comes from the heart, and we provide
+                At Penda, we believe that genuine care comes from the heart, and we provide
                 personalized services that are carefully tailored to each person&apos;s specific requirements, ensuring the highest level of comfort and care.
                 {/* At Penda, our mission is to provide compassionate, personalized care that empowers individuals to live independently and with dignity in the comfort of their own homes. */}
                 <br /><br />
