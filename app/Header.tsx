@@ -101,7 +101,7 @@ export default function Header() {
                 Facilities
               </div>
             </Link>
-            <hr />
+            {/* <hr /> */}
             {/* <Link href="/testimonials">
               <div>
                 Testimonials
