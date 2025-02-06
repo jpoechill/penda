@@ -66,8 +66,7 @@ export default function Home() {
                 Transportation Services
               </div>
               <div>
-                We offer reliable and accessible transportation for all residents. Our vehicles are equipped for mobility needs, and our staff are trained to assist every step of the way, helping you stay connected and independent.
-              </div>
+                While we do not have a personal vehicle yet, we can arrange reliable and accessible transportation for all residents. Our transportation services accommodate mobility needs, and our staff are trained to assist every step of the way, helping you stay connected and independent.</div>
             </div>
             <div className="bg-white border-[1px] border-[#016FA2] rounded-xl p-5">
               <div className="flex relative flex-row w-full rounded-xl overflow-hidden mb-4">
