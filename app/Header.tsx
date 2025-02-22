@@ -115,7 +115,7 @@ export default function Header() {
             <hr />
           </div >
           <div>
-            <Link href="tel:5204233363" className="flex mt-5">
+            <Link href="tel:5204577645" className="flex mt-5">
               <div className="bg-[#016FA2] shadow-xl font-bold text-lg rounded-full w-full text-center text-white py-2 px-8 ml-1">
                 Call Now
               </div>
