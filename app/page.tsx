@@ -1,7 +1,11 @@
+'use client'
+
 import Image from "next/image";
 import Header from "./Header"
 import Footer from "./Footer"
 import localFont from "next/font/local";
+
+import { useState } from 'react';
 
 const bebas = localFont({
   src: "./fonts/BebasNeue-Regular.ttf",
@@ -11,19 +15,50 @@ const bebas = localFont({
 
 
 export default function Home() {
+
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
   return (
     <main>
       <Header></Header>
 
       <div className="animate-[fade-me-in_.5s_ease-in-out]">
+
+
+
+
         <div className="flex justify-center w-full p-5 pt-0 px-10 relative">
-          <div className="flex relative flex-row w-full max-w-[1040px] rounded-xl overflow-hidden mt-[120px] shadow-xl">
-            <Image src="/img/cover_03.jpg" alt="Group Photo" className="h-[300px] lg:h-full w-full index-0 object-cover bg-cover bg-no-repeat" priority width={1200} height={500}></Image>
-            <div className="flex items-center justify-center absolute bottom-0 text-[40px] font-['Georgia'] italic bg-black bg-opacity-50 text-center text-white w-full p-5 mb-10">
+          <div className="relative flex-row w-full max-w-[1040px] h-[475px] rounded-xl overflow-hidden mt-[120px] shadow-xl">
+            {/* Image Fallback */}
+            {!videoLoaded && (
+              <Image
+                src="/img/cover_03.jpg"
+                alt="Group Photo"
+                layout="fill" // same as 'fill' in older versions
+                objectFit="cover"
+                className="z-0 transition-opacity duration-500"
+                priority
+              />
+            )}
+            {/* Video */}
+            <video
+              src="/video/penda_walkthrough_website.mp4"
+              className="w-full h-[475px] object-cover scale-[1.01]"
+              loop
+              autoPlay
+              muted
+              playsInline
+              onCanPlayThrough={() => setVideoLoaded(false)}
+            />
+
+            <div className="flex items-center justify-center absolute bottom-0 text-[40px] font-['Georgia'] italic bg-black bg-opacity-50 text-center text-white w-full p-5 mb-20">
               Where Comfort Feels Like Home
             </div>
+
           </div>
         </div>
+
+
         <div className="flex flex-col justify-center items-center w-full p-5 px-10 mt-0 my-5">
           <div className="text-center w-full pb-2">
             <div className={`${bebas.className} text-[#025176] tracking-wider text-[22px]`}>
