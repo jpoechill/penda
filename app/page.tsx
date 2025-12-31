@@ -51,18 +51,16 @@ export default function Home() {
             )}
 
             {/* Video (hidden until 7s + ready) */}
-            {videoReady && (
-              <video
-                src="/video/penda_walkthrough_website.mp4"
-                className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 ${showVideo ? 'opacity-100 z-10' : 'opacity-0'
-                  }`}
-                autoPlay
-                loop
-                muted
-                playsInline
-                onCanPlayThrough={() => { setVideoReady(true) }}
-              />
-            )}
+            <video
+              src="/video/penda_walkthrough_website.mp4"
+              className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 ${showVideo ? 'opacity-100 z-10' : 'opacity-0'
+                }`}
+              autoPlay
+              loop
+              muted
+              playsInline
+              onCanPlayThrough={() => setVideoReady(true)}
+            />
             <div className="flex items-center justify-center absolute bottom-0 text-[40px] font-['Georgia'] italic bg-black bg-opacity-50 text-center text-white w-full p-5 mb-20">
               Where Comfort Feels Like Home
             </div>
