@@ -60,7 +60,7 @@ export default function Home() {
                 loop
                 muted
                 playsInline
-                onCanPlayThrough={() => { alert('123') }}
+                onCanPlayThrough={() => { setVideoReady(true) }}
               />
             )}
             <div className="flex items-center justify-center absolute bottom-0 text-[40px] font-['Georgia'] italic bg-black bg-opacity-50 text-center text-white w-full p-5 mb-20">
