@@ -20,7 +20,6 @@ export default function Home() {
 
   useEffect(() => {
     if (videoReady) {
-      alert('ooga booga')
       const timer = setTimeout(() => setShowVideo(true), 1000); // wait 7s
       return () => clearTimeout(timer);
     }
