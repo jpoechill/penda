@@ -5,7 +5,7 @@ import Header from "./Header"
 import Footer from "./Footer"
 import localFont from "next/font/local";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const bebas = localFont({
   src: "./fonts/BebasNeue-Regular.ttf",
@@ -15,8 +15,17 @@ const bebas = localFont({
 
 
 export default function Home() {
+  const [videoReady, setVideoReady] = useState(false); // when video can play
+  const [showVideo, setShowVideo] = useState(false);   // actually show it after 7s
 
-  const [videoLoaded, setVideoLoaded] = useState(false);
+  useEffect(() => {
+    if (videoReady) {
+      alert('ooga booga')
+      const timer = setTimeout(() => setShowVideo(true), 1000); // wait 7s
+      return () => clearTimeout(timer);
+    }
+  }, [videoReady]);
+
 
   return (
     <main>
@@ -29,28 +38,31 @@ export default function Home() {
 
         <div className="flex justify-center w-full p-5 pt-0 px-10 relative">
           <div className="relative flex-row w-full max-w-[1040px] h-[475px] rounded-xl overflow-hidden mt-[120px] shadow-xl">
+
             {/* Image Fallback */}
-            {!videoLoaded && (
+            {!showVideo && (
               <Image
                 src="/img/cover_03.jpg"
                 alt="Group Photo"
-                layout="fill" // same as 'fill' in older versions
-                objectFit="cover"
-                className="z-0 transition-opacity duration-500"
+                fill
+                className="object-cover transition-opacity duration-500 z-0"
                 priority
               />
             )}
-            {/* Video */}
-            <video
-              src="/video/penda_walkthrough_website.mp4"
-              className="w-full h-[475px] object-cover scale-[1.01]"
-              loop
-              autoPlay
-              muted
-              playsInline
-              onCanPlayThrough={() => setVideoLoaded(false)}
-            />
 
+            {/* Video (hidden until 7s + ready) */}
+            {videoReady && (
+              <video
+                src="/video/penda_walkthrough_website.mp4"
+                className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 ${showVideo ? 'opacity-100 z-10' : 'opacity-0'
+                  }`}
+                autoPlay
+                loop
+                muted
+                playsInline
+                onCanPlayThrough={() => { alert('123') }}
+              />
+            )}
             <div className="flex items-center justify-center absolute bottom-0 text-[40px] font-['Georgia'] italic bg-black bg-opacity-50 text-center text-white w-full p-5 mb-20">
               Where Comfort Feels Like Home
             </div>
