@@ -10,7 +10,7 @@ import SectionHeading from "../components/SectionHeading";
 export const metadata: Metadata = {
   title: "Our Home",
   description:
-    "Tour Penda Home Care LLC’s comfortable assisted living home in Maricopa, AZ—private rooms, shared living spaces, and welcoming outdoor areas.",
+    "Tour Penda Home Care LLC’s comfortable assisted living home in Maricopa, AZ—5 bedrooms, 3 bathrooms, private and semi-private rooms, community areas, and outdoor spaces.",
 };
 
 const gallery = [
@@ -36,6 +36,7 @@ export default function FacilitiesPage() {
         description="Comfortable rooms and shared spaces in Maricopa, AZ—designed for safety, accessibility, and the feeling of belonging."
         imageSrc="/photography/master_bedroom_123026.jpg"
         imageAlt="Bedroom at Penda Home Care"
+        imagePosition="object-[center_40%]"
       />
 
       <section className="section-pad bg-surface">
@@ -48,9 +49,10 @@ export default function FacilitiesPage() {
 
           <div className="prose-care max-w-3xl space-y-4">
             <p>
-              From spacious private and semi-private rooms to beautifully landscaped outdoor areas, every
-              detail of our living spaces promotes both comfort and accessibility. Our common areas—including
-              cozy lounges and dining spaces—encourage social connection, making residents feel truly at home.
+              Our home includes 5 bedrooms and 3 bathrooms, with private and semi-private master rooms
+              designed for comfort and accessibility. Shared spaces—including a community area, dining
+              room, full kitchen, patio, and backyard—encourage connection and help residents feel truly
+              at home.
             </p>
           </div>
 
@@ -72,11 +74,26 @@ export default function FacilitiesPage() {
           </div>
 
           <aside className="mt-12 rounded-2xl border border-dashed border-primary/40 bg-primary-soft/50 p-6 md:p-8">
-            <h2 className="font-display text-xl font-semibold text-foreground">Amenities to confirm</h2>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-muted">
-              <li>[Room types and availability—private / semi-private]</li>
-              <li>[On-site amenities such as gardens, activity spaces, or wellness features]</li>
-              <li>[Any accessibility certifications or safety system details beyond what’s listed]</li>
+            <h2 className="font-display text-xl font-semibold text-foreground">Home details</h2>
+            <ul className="mt-5 grid gap-3 sm:grid-cols-2 sm:gap-x-8">
+              {[
+                "5 bedrooms",
+                "3 bathrooms",
+                "Private & semi-private master rooms",
+                "Community area",
+                "Dining room",
+                "Full kitchen",
+                "Patio",
+                "Backyard",
+              ].map((item) => (
+                <li key={item} className="flex gap-3 text-base leading-relaxed text-muted">
+                  <span
+                    className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
+                    aria-hidden="true"
+                  />
+                  {item}
+                </li>
+              ))}
             </ul>
           </aside>
 

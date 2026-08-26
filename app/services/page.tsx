@@ -1,11 +1,11 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { Metadata } from "next";
 import Header from "../Header";
 import Footer from "../Footer";
 import PageHero from "../components/PageHero";
 import CtaBanner from "../components/CtaBanner";
 import SectionHeading from "../components/SectionHeading";
+import { LICENSE_CAPACITY } from "../lib/site";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -65,8 +65,8 @@ export default function ServicesPage() {
       <PageHero
         title="Our care services"
         description="Practical, compassionate support in Maricopa, AZ that helps seniors live safely, comfortably, and with dignity—day by day."
-        imageSrc="/img/cozy_04.jpg"
-        imageAlt="Comfortable care environment"
+        imageSrc="/img/services_hero.png"
+        imageAlt="Caregiver walking arm-in-arm with a senior resident in a bright, welcoming home"
       />
 
       <section className="section-pad bg-surface">
@@ -97,27 +97,43 @@ export default function ServicesPage() {
           </div>
 
           <aside className="mt-12 rounded-2xl border border-dashed border-primary/40 bg-primary-soft/50 p-6 md:p-8">
-            <h2 className="font-display text-xl font-semibold text-foreground">Who these services are for</h2>
-            <p className="mt-3 prose-care text-base">
-              Penda is a good fit for seniors who need dependable daily support in a home-like setting—whether
-              that means help with mobility, medications, meals, or simply knowing someone caring is nearby.
-              Families often come to us when they want safety and companionship without the feel of a large
-              institution.
+            <h2 className="font-display text-xl font-semibold text-foreground md:text-2xl">
+              Who Our Services Are For
+            </h2>
+            <p className="mt-4 prose-care text-base">
+              Penda Home Care is a good fit for seniors who need dependable daily support in a safe,
+              comfortable, home-like setting. This may include help with mobility, medications, meals,
+              personal care, or simply the reassurance of having a caring professional nearby.
             </p>
-            <p className="mt-3 text-sm text-muted">
-              {/* PLACEHOLDER */}
-              [Add any specialty care offerings—e.g. memory care details—only if you currently provide them.]
+            <p className="mt-4 prose-care text-base">
+              With a licensed capacity of only {LICENSE_CAPACITY} residents, we provide individualized
+              attention without the institutional feel of a large facility. Our services include:
+            </p>
+            <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">
+              {[
+                "Individualized resident care plans",
+                "Assistance with activities of daily living",
+                "Medication support and management, as authorized",
+                "Personal care and daily living assistance",
+                "Trained and qualified caregivers",
+                "CPR and First Aid-trained staff",
+                "Coordination with healthcare providers and families",
+                "Hospice coordination and support, when appropriate",
+                "Respect for each resident’s rights, privacy, dignity, and independence",
+              ].map((item) => (
+                <li
+                  key={item}
+                  className="rounded-lg border border-border bg-white px-4 py-2 text-sm font-medium text-foreground md:text-base"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-5 prose-care text-base">
+              Penda Home Care also works with eligible residents through AHCCCS and ALTCS when services
+              are authorized and covered.
             </p>
           </aside>
-
-          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link href="/schedule" className="btn-primary">
-              Schedule a Care Consultation
-            </Link>
-            <Link href="/contact" className="btn-secondary">
-              Talk With Our Care Team
-            </Link>
-          </div>
         </div>
       </section>
 

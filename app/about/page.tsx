@@ -6,11 +6,17 @@ import Footer from "../Footer";
 import PageHero from "../components/PageHero";
 import CtaBanner from "../components/CtaBanner";
 import ReviewCta from "../components/ReviewCta";
+import {
+  LICENSE_CAPACITY,
+  LICENSE_NUMBER,
+  LICENSE_TYPE,
+  LICENSING_STATEMENT,
+} from "../lib/site";
 
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Penda Home Care LLC—a small private assisted living home in Maricopa, Arizona dedicated to personalized, compassionate care.",
+    "Learn about Penda Home Care LLC—an Arizona licensed assisted living home (ADHS AL13024H) in Maricopa dedicated to personalized, compassionate care.",
 };
 
 const differences = [
@@ -28,8 +34,8 @@ export default function AboutPage() {
       <PageHero
         title="Who we are"
         description="A small private home in Maricopa, AZ where personalized care, dignity, and belonging come first."
-        imageSrc="/img/about_06.jpg"
-        imageAlt="Penda Home Care community"
+        imageSrc="/img/about_cover.png"
+        imageAlt="Penda Home Care care team smiling together"
       />
 
       <section className="section-pad bg-surface">
@@ -91,36 +97,50 @@ export default function AboutPage() {
             </ul>
           </div>
 
-          <aside className="mx-auto mt-14 max-w-3xl rounded-2xl border border-dashed border-primary/40 bg-primary-soft/50 p-6 md:p-8">
-            <h3 className="font-display text-xl font-semibold text-foreground">
-              Details we’d like to add
+          <aside
+            className="mx-auto mt-14 max-w-3xl rounded-2xl border border-border bg-[var(--warm-wash)] p-6 md:p-8"
+            aria-labelledby="licensing-heading"
+          >
+            <h3
+              id="licensing-heading"
+              className="font-display text-xl font-semibold text-foreground md:text-2xl"
+            >
+              Our licensing &amp; credentials
             </h3>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-muted">
-              <li>[Years of experience / when Penda opened]</li>
-              <li>[Care team credentials or training highlights]</li>
-              <li>[State license number or regulatory affiliations]</li>
+            <ul className="mt-5 space-y-2 text-base leading-relaxed text-foreground">
+              <li>{LICENSE_TYPE}</li>
+              <li>
+                ADHS License No. <span className="font-semibold">{LICENSE_NUMBER}</span>
+              </li>
+              <li>Licensed Capacity: {LICENSE_CAPACITY} Residents</li>
             </ul>
-            <p className="mt-3 text-sm text-muted">
-              These placeholders are intentional—we won’t invent claims. Share accurate details when
-              you’re ready and we’ll publish them.
-            </p>
+            <p className="mt-5 text-base leading-relaxed text-muted">{LICENSING_STATEMENT}</p>
           </aside>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {["/img/about_01.jpg", "/img/about_02.jpg", "/img/about_03.jpg"].map((src) => (
-              <div key={src} className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+          <div className="mt-12 grid gap-4 sm:grid-cols-2">
+            {[
+              {
+                src: "/img/services_hero.png",
+                alt: "Caregiver walking arm-in-arm with a senior resident",
+              },
+              {
+                src: "/img/who_we_are.png",
+                alt: "Caregivers sharing a photo album with a senior resident",
+              },
+            ].map((image) => (
+              <div key={image.src} className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                 <Image
-                  src={src}
-                  alt="Life and care at Penda Home Care"
+                  src={image.src}
+                  alt={image.alt}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 1024px) 50vw, 33vw"
+                  sizes="(max-width: 640px) 100vw, 50vw"
                 />
               </div>
             ))}
           </div>
 
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link href="/schedule" className="btn-primary">
               Schedule a Care Consultation
             </Link>

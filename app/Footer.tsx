@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { GOOGLE_REVIEW_URL } from "./lib/site";
+import {
+  GOOGLE_REVIEW_URL,
+  LICENSE_CAPACITY,
+  LICENSE_NUMBER,
+  LICENSE_TYPE,
+} from "./lib/site";
 
 const footerLinks = [
   { href: "/about", label: "About Us" },
@@ -21,14 +26,21 @@ export default function Footer() {
               <Image
                 src="/logo_full_on_dark_clr_02.png"
                 alt="Penda Home Care LLC"
-                width={180}
-                height={60}
-                className="h-12 w-auto"
+                width={320}
+                height={107}
+                className="h-20 w-auto md:h-24"
               />
             </Link>
             <p className="mt-5 max-w-sm text-base leading-relaxed text-white/80">
-              Personalized assisted living in a warm private home—helping seniors live safely,
-              comfortably, and with dignity.
+              Penda Home Care is committed to providing a safe, comfortable, and welcoming home
+              where residents receive individualized care and attention.
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-white/75">
+              {LICENSE_TYPE}
+              <br />
+              ADHS License No. {LICENSE_NUMBER}
+              <br />
+              Licensed Capacity: {LICENSE_CAPACITY} Residents
             </p>
             <p className="mt-4">
               <Link

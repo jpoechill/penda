@@ -3,13 +3,11 @@ import type { Metadata } from "next";
 import Header from "../Header";
 import Footer from "../Footer";
 import PageHero from "../components/PageHero";
-import CtaBanner from "../components/CtaBanner";
-import ReviewCta from "../components/ReviewCta";
 
 export const metadata: Metadata = {
   title: "Family Stories",
   description:
-    "Family stories from Penda Home Care LLC in Maricopa, AZ are coming soon. Leave a Google review or contact us to learn more.",
+    "Family stories from Penda Home Care LLC in Maricopa, AZ are coming soon. Contact us to learn more about care for your loved one.",
 };
 
 export default function TestimonialsPage() {
@@ -19,8 +17,9 @@ export default function TestimonialsPage() {
       <PageHero
         title="Family stories"
         description="We’re gathering real experiences from families we serve in Maricopa, Arizona."
-        imageSrc="/img/about_02.jpg"
+        imageSrc="/img/who_we_are.png"
         imageAlt="Meaningful moments of care and companionship"
+        imagePosition="object-[center_30%]"
       />
 
       <section className="section-pad bg-surface" aria-labelledby="stories-coming-soon">
@@ -37,8 +36,8 @@ export default function TestimonialsPage() {
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-muted">
               We’re preparing authentic reflections from families who have trusted Penda Home Care
-              LLC in Maricopa, AZ. Check back soon—or leave a Google review to share your experience
-              with other local families.
+              LLC in Maricopa, AZ. Check back soon, or reach out if you’d like to learn more about
+              care for your loved one.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link href="/schedule" className="btn-primary w-full sm:w-auto">
@@ -49,12 +48,9 @@ export default function TestimonialsPage() {
               </Link>
             </div>
           </div>
-
-          <ReviewCta className="mx-auto mt-10 max-w-2xl" />
         </div>
       </section>
 
-      <CtaBanner />
       <Footer />
     </main>
   );

@@ -44,7 +44,7 @@ const services = [
     title: "Prepared Meals",
     description:
       "Fresh, balanced meals with dietary accommodations—heart-healthy, low-sodium, diabetic-friendly, and customized options.",
-    icon: "/img/cook.jpeg",
+    icon: "/svg/meals.svg",
   },
 ];
 
@@ -140,7 +140,7 @@ export default function Home() {
         </div>
 
         <div className="container-site relative flex min-h-[88vh] flex-col justify-end pb-16 pt-32 md:min-h-[92vh] md:justify-center md:pb-24 md:pt-28">
-          <div className="max-w-2xl animate-fade-up">
+          <div className="max-w-2xl animate-fade-up rounded-2xl bg-black/15 px-5 py-5 sm:px-7 sm:py-6">
             <p className="font-display text-2xl font-semibold tracking-tight text-white md:text-3xl">
               Penda Home Care LLC
             </p>
@@ -217,22 +217,35 @@ export default function Home() {
             description="From safe living spaces to meals and medication support, we help with the essentials that keep daily life steady and dignified."
           />
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => (
+            {services.map((service) => {
+              const isMealsIcon = service.icon.includes("meals");
+              return (
               <article key={service.title} className="card-quiet transition duration-300 hover:border-primary/40">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl bg-primary-soft">
+                <div
+                  className={`mb-4 flex items-center justify-center overflow-hidden rounded-xl bg-primary-soft ${
+                    isMealsIcon ? "h-14 w-14" : "h-12 w-12"
+                  }`}
+                >
                   <Image
                     src={service.icon}
                     alt=""
-                    width={48}
-                    height={48}
-                    className={service.icon.endsWith(".svg") ? "h-7 w-7" : "h-full w-full object-cover"}
+                    width={56}
+                    height={56}
+                    className={
+                      isMealsIcon
+                        ? "h-10 w-10 object-contain"
+                        : service.icon.includes("/svg/")
+                          ? "h-7 w-7 object-contain"
+                          : "h-full w-full object-cover"
+                    }
                     aria-hidden="true"
                   />
                 </div>
                 <h3 className="font-display text-xl font-semibold text-foreground">{service.title}</h3>
                 <p className="mt-2 text-base leading-relaxed text-muted">{service.description}</p>
               </article>
-            ))}
+              );
+            })}
           </div>
           <div className="mt-10 text-center">
             <Link href="/services" className="btn-primary">

@@ -4,6 +4,12 @@ import Header from "../Header";
 import Footer from "../Footer";
 import PageHero from "../components/PageHero";
 import ReviewCta from "../components/ReviewCta";
+import {
+  GOOGLE_REVIEW_URL,
+  MAP_DIRECTIONS_URL,
+  MAP_EMBED_URL,
+  SITE_ADDRESS,
+} from "../lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -31,8 +37,6 @@ const contactItems = [
         Monday–Friday: 9AM – 6PM
         <br />
         Saturday: 10AM – 4PM
-        <br />
-        <span className="text-sm text-muted">[Confirm Sunday / after-hours emergency contact if applicable]</span>
       </>
     ),
   },
@@ -65,6 +69,7 @@ export default function ContactPage() {
         description="Reach Penda Home Care LLC in Maricopa, AZ—whether you’re exploring care options, scheduling a visit, or have questions."
         imageSrc="/img/getintouch_01.jpg"
         imageAlt="Welcoming entry and care environment in Maricopa, AZ"
+        imagePosition="object-[center_45%]"
       />
 
       <section className="section-pad bg-surface">
@@ -84,6 +89,43 @@ export default function ContactPage() {
                 <div className="mt-3 text-lg leading-relaxed text-foreground">{item.content}</div>
               </div>
             ))}
+          </div>
+
+          <div className="card-quiet mt-12 overflow-hidden p-0">
+            <div className="flex flex-col gap-3 border-b border-border px-6 py-5 sm:flex-row sm:items-center sm:justify-between md:px-8">
+              <div>
+                <h2 className="font-display text-2xl font-semibold text-foreground">Find us</h2>
+                <p className="mt-1 text-base text-muted">{SITE_ADDRESS}</p>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href={MAP_DIRECTIONS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary !px-4 !py-2.5 text-sm"
+                >
+                  Get directions
+                </Link>
+                <Link
+                  href={GOOGLE_REVIEW_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary !px-4 !py-2.5 text-sm"
+                >
+                  Open in Google Maps
+                </Link>
+              </div>
+            </div>
+            <div className="relative aspect-[16/10] w-full bg-[var(--warm-wash)] md:aspect-[21/9]">
+              <iframe
+                title="Map showing Penda Home Care LLC at 40968 W. Portis Drive, Maricopa, AZ"
+                src={MAP_EMBED_URL}
+                className="absolute inset-0 h-full w-full border-0"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
           </div>
 
           <ReviewCta className="mt-12" />

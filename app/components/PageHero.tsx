@@ -5,6 +5,8 @@ type PageHeroProps = {
   description?: string;
   imageSrc: string;
   imageAlt: string;
+  /** Tailwind object-position class. Prefer object-top when faces are near the top of the photo. */
+  imagePosition?: string;
 };
 
 export default function PageHero({
@@ -12,29 +14,34 @@ export default function PageHero({
   description,
   imageSrc,
   imageAlt,
+  imagePosition = "object-top",
 }: PageHeroProps) {
   return (
-    <header className="relative isolate min-h-[42vh] overflow-hidden pt-24 md:min-h-[48vh] md:pt-28">
-      <Image
-        src={imageSrc}
-        alt={imageAlt}
-        fill
-        priority
-        className="object-cover"
-        sizes="100vw"
-      />
-      <div
-        className="absolute inset-0 bg-gradient-to-t from-[#025176]/90 via-[#025176]/55 to-[#025176]/25"
-        aria-hidden="true"
-      />
-      <div className="container-site relative flex min-h-[42vh] flex-col justify-end pb-12 pt-32 md:min-h-[48vh] md:pb-16">
-        <h1 className="max-w-3xl font-display text-4xl font-semibold tracking-tight text-white md:text-5xl">
-          {title}
-        </h1>
-        {description && (
-          <p className="mt-4 max-w-2xl text-lg text-white/90 md:text-xl">{description}</p>
-        )}
-      </div>
-    </header>
+    <div className="pt-[4.75rem] md:pt-[5.5rem]">
+      <header className="relative isolate min-h-[44vh] overflow-hidden md:min-h-[50vh]">
+        <Image
+          src={imageSrc}
+          alt={imageAlt}
+          fill
+          priority
+          className={`object-cover ${imagePosition}`}
+          sizes="100vw"
+        />
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-[#025176]/92 via-[#025176]/50 to-[#025176]/25"
+          aria-hidden="true"
+        />
+        <div className="container-site relative flex min-h-[44vh] flex-col justify-end pb-12 pt-16 md:min-h-[50vh] md:pb-16 md:pt-20">
+          <div className="max-w-3xl rounded-2xl bg-black/15 px-5 py-5 sm:px-7 sm:py-6">
+            <h1 className="font-display text-4xl font-semibold tracking-tight text-white md:text-5xl">
+              {title}
+            </h1>
+            {description && (
+              <p className="mt-4 text-lg text-white/95 md:text-xl">{description}</p>
+            )}
+          </div>
+        </div>
+      </header>
+    </div>
   );
 }
