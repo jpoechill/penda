@@ -1,10 +1,47 @@
 /** Shared site details for Penda Home Care LLC (Maricopa, AZ). */
 
 export const SITE_NAME = "Penda Home Care LLC";
+export const SITE_NAME_SHORT = "Penda Home Care";
 export const SITE_LOCATION = "Maricopa, AZ";
 export const SITE_LOCATION_FULL = "Maricopa, Arizona";
+export const SITE_TAGLINE =
+  "Personalized assisted living in a warm private home—helping seniors live safely, comfortably, and with dignity.";
+
+/** Production site URL. Override with NEXT_PUBLIC_SITE_URL when deploying. */
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://www.pendahomecare.com";
+
 export const SITE_ADDRESS = "40968 W. Portis Drive, Maricopa, AZ 85138";
+export const SITE_STREET = "40968 W. Portis Drive";
+export const SITE_CITY = "Maricopa";
+export const SITE_REGION = "AZ";
+export const SITE_POSTAL = "85138";
+export const SITE_COUNTRY = "US";
 export const SITE_MAP_COORDS = { lat: 33.0464864, lng: -112.0078846 };
+
+export const SITE_PHONE = "(520) 457-7645";
+export const SITE_PHONE_TEL = "+15204577645";
+export const SITE_FAX = "(520) 423-3363";
+export const SITE_EMAIL = "pendacare2023@gmail.com";
+
+export const SITE_OG_IMAGE = "/img/cover_03.jpg";
+
+export const SITE_SOCIAL = {
+  facebook: "https://www.facebook.com/profile.php?id=61568741845327",
+  instagram: "https://www.instagram.com/pendahomecare",
+} as const;
+
+export const SITE_KEYWORDS = [
+  "assisted living Maricopa AZ",
+  "Penda Home Care",
+  "senior home care Maricopa",
+  "assisted living home Arizona",
+  "private assisted living",
+  "elder care Maricopa",
+  "AHCCCS ALTCS assisted living",
+  "medication management seniors",
+  "senior care Maricopa Arizona",
+];
 
 export const LICENSE_TYPE = "Arizona Licensed Assisted Living Home";
 export const LICENSE_NUMBER = "AL13024H";
@@ -20,3 +57,13 @@ export const MAP_EMBED_URL =
 
 export const MAP_DIRECTIONS_URL =
   "https://www.google.com/maps/dir/?api=1&destination=40968+W.+Portis+Drive,+Maricopa,+AZ+85138";
+
+export const NAV_ROUTES = [
+  { path: "/", label: "Home", changeFrequency: "weekly" as const, priority: 1 },
+  { path: "/about", label: "About", changeFrequency: "monthly" as const, priority: 0.8 },
+  { path: "/services", label: "Services", changeFrequency: "monthly" as const, priority: 0.9 },
+  { path: "/facilities", label: "Our Home", changeFrequency: "monthly" as const, priority: 0.8 },
+  { path: "/testimonials", label: "Stories", changeFrequency: "weekly" as const, priority: 0.6 },
+  { path: "/schedule", label: "Schedule", changeFrequency: "monthly" as const, priority: 0.9 },
+  { path: "/contact", label: "Contact", changeFrequency: "monthly" as const, priority: 0.8 },
+];

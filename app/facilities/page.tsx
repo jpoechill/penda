@@ -6,12 +6,15 @@ import Footer from "../Footer";
 import PageHero from "../components/PageHero";
 import CtaBanner from "../components/CtaBanner";
 import SectionHeading from "../components/SectionHeading";
+import { pageMetadata } from "../lib/seo";
 
-export const metadata: Metadata = {
-  title: "Our Home",
+export const metadata: Metadata = pageMetadata({
+  title: "Our Assisted Living Home",
   description:
-    "Tour Penda Home Care LLC’s comfortable assisted living home in Maricopa, AZ—5 bedrooms, 3 bathrooms, private and semi-private rooms, community areas, and outdoor spaces.",
-};
+    "Tour Penda Home Care LLC’s assisted living home in Maricopa, AZ—5 bedrooms, 3 bathrooms, private and semi-private rooms, community areas, patio, and backyard.",
+  path: "/facilities",
+  image: "/img/facilities_hero.png",
+});
 
 const gallery = [
   {
@@ -34,7 +37,7 @@ export default function FacilitiesPage() {
       <PageHero
         title="Our living home"
         description="Comfortable rooms and shared spaces in Maricopa, AZ—designed for safety, accessibility, and the feeling of belonging."
-        imageSrc="/photography/master_bedroom_123026.jpg"
+        imageSrc="/img/facilities_hero.png"
         imageAlt="Bedroom at Penda Home Care"
         imagePosition="object-[center_40%]"
       />
@@ -56,24 +59,7 @@ export default function FacilitiesPage() {
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2">
-            {gallery.map((item) => (
-              <div
-                key={item.src}
-                className={`relative aspect-[4/3] overflow-hidden rounded-2xl ${item.span}`}
-              >
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  fill
-                  className="object-cover transition duration-500 hover:scale-[1.02]"
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                />
-              </div>
-            ))}
-          </div>
-
-          <aside className="mt-12 rounded-2xl border border-dashed border-primary/40 bg-primary-soft/50 p-6 md:p-8">
+          <aside className="mt-10 rounded-2xl border border-dashed border-primary/40 bg-primary-soft/50 p-6 md:p-8">
             <h2 className="font-display text-xl font-semibold text-foreground">Home details</h2>
             <ul className="mt-5 grid gap-3 sm:grid-cols-2 sm:gap-x-8">
               {[
@@ -104,6 +90,23 @@ export default function FacilitiesPage() {
             <Link href="/contact" className="btn-secondary">
               Ask about availability
             </Link>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2">
+            {gallery.map((item) => (
+              <div
+                key={item.src}
+                className={`relative aspect-[4/3] overflow-hidden rounded-2xl ${item.span}`}
+              >
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  className="object-cover transition duration-500 hover:scale-[1.02]"
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>

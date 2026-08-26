@@ -2,12 +2,16 @@ import type { Metadata } from "next";
 import Header from "../Header";
 import Footer from "../Footer";
 import PageHero from "../components/PageHero";
+import { pageMetadata } from "../lib/seo";
+import { SITE_EMAIL, SITE_PHONE, SITE_PHONE_TEL } from "../lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Schedule a Care Consultation",
   description:
-    "Schedule a care consultation or tour of Penda Home Care LLC in Maricopa, Arizona. Meet our team and see if we’re the right fit.",
-};
+    `Schedule a care consultation or tour of Penda Home Care LLC in Maricopa, AZ. Call ${SITE_PHONE} or email ${SITE_EMAIL} to visit our assisted living home.`,
+  path: "/schedule",
+  image: "/img/schedule_hero.png",
+});
 
 export default function SchedulePage() {
   return (
@@ -16,8 +20,9 @@ export default function SchedulePage() {
       <PageHero
         title="Schedule a care consultation"
         description="Visit our Maricopa, AZ home, meet the care team, and talk through what your loved one needs—at a pace that feels comfortable."
-        imageSrc="/img/landscape_02.jpg"
-        imageAlt="Welcoming outdoor setting at Penda"
+        imageSrc="/img/schedule_hero.png"
+        imageAlt="Care director welcoming a family member at the door for a consultation visit"
+        imagePosition="object-[center_30%]"
       />
 
       <section className="section-pad bg-surface">
@@ -30,7 +35,7 @@ export default function SchedulePage() {
 
             <form
               className="mt-10 rounded-3xl border border-border bg-[var(--warm-wash)] p-6 md:p-10"
-              action="mailto:pendacare2023@gmail.com"
+              action={`mailto:${SITE_EMAIL}`}
               method="get"
               encType="text/plain"
             >
@@ -93,10 +98,10 @@ export default function SchedulePage() {
 
               <p className="mt-4 text-sm text-muted">
                 {/* PLACEHOLDER: Wire this form to your preferred inbox, CRM, or scheduling tool */}
-                Submitting opens your email client to send this request to pendacare2023@gmail.com. Prefer
-                to talk now?{" "}
-                <a href="tel:5204577645" className="font-semibold text-primary hover:underline">
-                  Call (520) 457-7645
+                Submitting opens your email client to send this request to {SITE_EMAIL}. Prefer to talk
+                now?{" "}
+                <a href={`tel:${SITE_PHONE_TEL}`} className="font-semibold text-primary hover:underline">
+                  Call {SITE_PHONE}
                 </a>
                 .
               </p>

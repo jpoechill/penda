@@ -9,24 +9,34 @@ import {
   MAP_DIRECTIONS_URL,
   MAP_EMBED_URL,
   SITE_ADDRESS,
+  SITE_CITY,
+  SITE_EMAIL,
+  SITE_FAX,
+  SITE_PHONE,
+  SITE_PHONE_TEL,
+  SITE_POSTAL,
+  SITE_STREET,
 } from "../lib/site";
+import { pageMetadata } from "../lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact",
+export const metadata: Metadata = pageMetadata({
+  title: "Contact Us",
   description:
-    "Contact Penda Home Care LLC in Maricopa, AZ. Call (520) 457-7645 or email pendacare2023@gmail.com to talk with our care team.",
-};
+    `Contact Penda Home Care LLC in Maricopa, AZ. Call ${SITE_PHONE} or email ${SITE_EMAIL} to talk with our care team about assisted living.`,
+  path: "/contact",
+  image: "/img/contact_hero.png",
+});
 
 const contactItems = [
   {
     title: "Phone",
     content: (
       <>
-        <a href="tel:5204577645" className="text-primary hover:underline">
-          (520) 457-7645
+        <a href={`tel:${SITE_PHONE_TEL}`} className="text-primary hover:underline">
+          {SITE_PHONE}
         </a>
         <br />
-        <span className="text-muted">Fax: (520) 423-3363</span>
+        <span className="text-muted">Fax: {SITE_FAX}</span>
       </>
     ),
   },
@@ -43,19 +53,24 @@ const contactItems = [
   {
     title: "Email",
     content: (
-      <a href="mailto:pendacare2023@gmail.com" className="text-primary hover:underline">
-        pendacare2023@gmail.com
+      <a href={`mailto:${SITE_EMAIL}`} className="text-primary hover:underline">
+        {SITE_EMAIL}
       </a>
     ),
   },
   {
     title: "Address",
     content: (
-      <>
-        40968 W. Portis Drive
+      <a
+        href={GOOGLE_REVIEW_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-primary hover:underline"
+      >
+        {SITE_STREET}
         <br />
-        Maricopa, AZ 85138
-      </>
+        {SITE_CITY}, AZ {SITE_POSTAL}
+      </a>
     ),
   },
 ];
@@ -67,7 +82,7 @@ export default function ContactPage() {
       <PageHero
         title="Get in touch"
         description="Reach Penda Home Care LLC in Maricopa, AZ—whether you’re exploring care options, scheduling a visit, or have questions."
-        imageSrc="/img/getintouch_01.jpg"
+        imageSrc="/img/contact_hero.png"
         imageAlt="Welcoming entry and care environment in Maricopa, AZ"
         imagePosition="object-[center_45%]"
       />
@@ -134,7 +149,7 @@ export default function ContactPage() {
             <Link href="/schedule" className="btn-primary w-full sm:w-auto">
               Schedule a Care Consultation
             </Link>
-            <Link href="tel:5204577645" className="btn-secondary w-full sm:w-auto">
+            <Link href={`tel:${SITE_PHONE_TEL}`} className="btn-secondary w-full sm:w-auto">
               Talk With Our Care Team
             </Link>
           </div>

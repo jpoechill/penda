@@ -12,12 +12,15 @@ import {
   LICENSE_TYPE,
   LICENSING_STATEMENT,
 } from "../lib/site";
+import { pageMetadata } from "../lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "About Us",
   description:
-    "Learn about Penda Home Care LLC—an Arizona licensed assisted living home (ADHS AL13024H) in Maricopa dedicated to personalized, compassionate care.",
-};
+    "Learn about Penda Home Care LLC—an Arizona licensed assisted living home (ADHS AL13024H) in Maricopa dedicated to personalized, compassionate senior care.",
+  path: "/about",
+  image: "/img/about_cover.png",
+});
 
 const differences = [
   "A small private home—not a large institution",
@@ -36,6 +39,7 @@ export default function AboutPage() {
         description="A small private home in Maricopa, AZ where personalized care, dignity, and belonging come first."
         imageSrc="/img/about_cover.png"
         imageAlt="Penda Home Care care team smiling together"
+        imagePosition="object-[center_10%]"
       />
 
       <section className="section-pad bg-surface">
@@ -117,7 +121,7 @@ export default function AboutPage() {
             <p className="mt-5 text-base leading-relaxed text-muted">{LICENSING_STATEMENT}</p>
           </aside>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-2">
+          <div className="mt-12 grid gap-4 sm:grid-cols-3">
             {[
               {
                 src: "/img/services_hero.png",
@@ -127,6 +131,10 @@ export default function AboutPage() {
                 src: "/img/who_we_are.png",
                 alt: "Caregivers sharing a photo album with a senior resident",
               },
+              {
+                src: "/img/contact_hero.png",
+                alt: "Exterior of Penda Home Care in Maricopa, AZ",
+              },
             ].map((image) => (
               <div key={image.src} className="relative aspect-[4/3] overflow-hidden rounded-2xl">
                 <Image
@@ -134,7 +142,7 @@ export default function AboutPage() {
                   alt={image.alt}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 640px) 100vw, 50vw"
+                  sizes="(max-width: 640px) 100vw, 33vw"
                 />
               </div>
             ))}

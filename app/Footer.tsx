@@ -5,6 +5,15 @@ import {
   LICENSE_CAPACITY,
   LICENSE_NUMBER,
   LICENSE_TYPE,
+  SITE_CITY,
+  SITE_EMAIL,
+  SITE_FAX,
+  SITE_NAME,
+  SITE_PHONE,
+  SITE_PHONE_TEL,
+  SITE_POSTAL,
+  SITE_SOCIAL,
+  SITE_STREET,
 } from "./lib/site";
 
 const footerLinks = [
@@ -22,13 +31,17 @@ export default function Footer() {
       <div className="container-site py-14 md:py-16">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           <div>
-            <Link href="/" aria-label="Penda Home Care LLC home">
+            <Link
+              href="/"
+              aria-label={`${SITE_NAME} home`}
+              className="mx-auto flex w-fit justify-center"
+            >
               <Image
                 src="/logo_full_on_dark_clr_02.png"
-                alt="Penda Home Care LLC"
-                width={320}
-                height={107}
-                className="h-20 w-auto md:h-24"
+                alt={SITE_NAME}
+                width={400}
+                height={133}
+                className="h-24 w-auto md:h-28 lg:h-32"
               />
             </Link>
             <p className="mt-5 max-w-sm text-base leading-relaxed text-white/80">
@@ -49,7 +62,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="text-sm font-semibold text-white underline-offset-4 hover:underline"
               >
-                Leave a Google review for Penda Home Care LLC
+                Leave a Google review for {SITE_NAME}
               </Link>
             </p>
           </div>
@@ -57,27 +70,29 @@ export default function Footer() {
           <div>
             <h2 className="font-display text-xl font-semibold">Visit &amp; call</h2>
             <address className="mt-4 not-italic text-white/85 leading-relaxed">
-              40968 W. Portis Drive
+              {SITE_STREET}
               <br />
-              Maricopa, AZ 85138
+              {SITE_CITY}, AZ {SITE_POSTAL}
               <br />
-              <br />
-              <a href="tel:5204577645" className="hover:text-white underline-offset-4 hover:underline">
-                Phone: (520) 457-7645
-              </a>
-              <br />
-              <span>Fax: (520) 423-3363</span>
               <br />
               <a
-                href="mailto:pendacare2023@gmail.com"
+                href={`tel:${SITE_PHONE_TEL}`}
                 className="hover:text-white underline-offset-4 hover:underline"
               >
-                pendacare2023@gmail.com
+                Phone: {SITE_PHONE}
+              </a>
+              <br />
+              <span>Fax: {SITE_FAX}</span>
+              <br />
+              <a
+                href={`mailto:${SITE_EMAIL}`}
+                className="hover:text-white underline-offset-4 hover:underline"
+              >
+                {SITE_EMAIL}
               </a>
             </address>
             <p className="mt-4 text-sm text-white/70">
-              Serving local families and nearby communities
-              {/* TODO: Confirm exact service area / counties with the care team */}
+              Serving Maricopa, AZ and nearby communities
             </p>
           </div>
 
@@ -104,16 +119,16 @@ export default function Footer() {
               <Link
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.facebook.com/profile.php?id=61568741845327"
-                aria-label="Penda Home Care LLC on Facebook"
+                href={SITE_SOCIAL.facebook}
+                aria-label={`${SITE_NAME} on Facebook`}
               >
                 <Image src="/social-facebook.svg" alt="" width={36} height={36} aria-hidden="true" />
               </Link>
               <Link
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.instagram.com/pendahomecare"
-                aria-label="Penda Home Care LLC on Instagram"
+                href={SITE_SOCIAL.instagram}
+                aria-label={`${SITE_NAME} on Instagram`}
               >
                 <Image src="/social-instagram.svg" alt="" width={36} height={36} aria-hidden="true" />
               </Link>
@@ -122,7 +137,9 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-2 border-t border-white/15 pt-8 text-sm text-white/65 md:flex-row md:items-center md:justify-between">
-          <p>Penda Home Care LLC © {new Date().getFullYear()}</p>
+          <p>
+            {SITE_NAME} © {new Date().getFullYear()}
+          </p>
         </div>
       </div>
     </footer>

@@ -3,12 +3,15 @@ import type { Metadata } from "next";
 import Header from "../Header";
 import Footer from "../Footer";
 import PageHero from "../components/PageHero";
+import { pageMetadata } from "../lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Family Stories",
   description:
-    "Family stories from Penda Home Care LLC in Maricopa, AZ are coming soon. Contact us to learn more about care for your loved one.",
-};
+    "Family stories from Penda Home Care LLC in Maricopa, AZ are coming soon. Contact us to learn more about personalized assisted living for your loved one.",
+  path: "/testimonials",
+  image: "/img/who_we_are.png",
+});
 
 export default function TestimonialsPage() {
   return (

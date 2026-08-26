@@ -5,13 +5,15 @@ import Footer from "../Footer";
 import PageHero from "../components/PageHero";
 import CtaBanner from "../components/CtaBanner";
 import SectionHeading from "../components/SectionHeading";
-import { LICENSE_CAPACITY } from "../lib/site";
+import { pageMetadata } from "../lib/seo";
 
-export const metadata: Metadata = {
-  title: "Services",
+export const metadata: Metadata = pageMetadata({
+  title: "Assisted Living Services",
   description:
-    "Explore Penda Home Care LLC services in Maricopa, AZ—including comfortable living, accessibility, safety, transportation, medication management, and prepared meals.",
-};
+    "Explore Penda Home Care LLC services in Maricopa, AZ—comfortable living, accessibility, safety, transportation, medication management, prepared meals, and AHCCCS/ALTCS support.",
+  path: "/services",
+  image: "/img/services_hero.png",
+});
 
 const services = [
   {
@@ -105,10 +107,7 @@ export default function ServicesPage() {
               comfortable, home-like setting. This may include help with mobility, medications, meals,
               personal care, or simply the reassurance of having a caring professional nearby.
             </p>
-            <p className="mt-4 prose-care text-base">
-              With a licensed capacity of only {LICENSE_CAPACITY} residents, we provide individualized
-              attention without the institutional feel of a large facility. Our services include:
-            </p>
+            <p className="mt-4 prose-care text-base">Our services include:</p>
             <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">
               {[
                 "Individualized resident care plans",
