@@ -95,16 +95,22 @@ const steps = [
   },
 ];
 
+const HERO_VIDEO_PLAYBACK_RATE = 0.85;
+
 export default function HomePage() {
+  const [showCoverImage, setShowCoverImage] = useState(false);
   const [loadVideo, setLoadVideo] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
 
   useEffect(() => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduceMotion) {
+      setShowCoverImage(true);
       setShowVideo(true);
       return;
     }
+
+    requestAnimationFrame(() => setShowCoverImage(true));
 
     // Hold the hero photo briefly before starting the walkthrough video
     const timer = setTimeout(() => setLoadVideo(true), 1500);
@@ -124,7 +130,9 @@ export default function HomePage() {
             fill
             priority
             unoptimized
-            className="object-cover object-[center_15%]"
+            className={`object-cover object-[center_15%] transition-opacity duration-1000 ${
+              showCoverImage ? "opacity-100" : "opacity-0"
+            }`}
             sizes="100vw"
           />
           {loadVideo && (
@@ -139,7 +147,10 @@ export default function HomePage() {
               playsInline
               preload="metadata"
               poster="/img/cover_03.jpg"
-              onCanPlayThrough={() => setShowVideo(true)}
+              onCanPlayThrough={(event) => {
+                event.currentTarget.playbackRate = HERO_VIDEO_PLAYBACK_RATE;
+                setShowVideo(true);
+              }}
               aria-hidden={!showVideo}
             />
           )}
