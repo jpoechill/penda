@@ -132,8 +132,8 @@ export default function AboutPage() {
                 alt: "Caregivers sharing a photo album with a senior resident",
               },
               {
-                src: "/img/contact_hero.png",
-                alt: "Exterior of Penda Home Care in Maricopa, AZ",
+                src: "/img/schedule_hero.png",
+                alt: "Care director welcoming a family member for a consultation visit",
               },
             ].map((image) => (
               <div key={image.src} className="relative aspect-[4/3] overflow-hidden rounded-2xl">
