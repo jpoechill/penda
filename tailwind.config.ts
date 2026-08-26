@@ -39,6 +39,7 @@ const config: Config = {
       },
       animation: {
         "fade-up": "fade-up 0.6s ease-out both",
+        "fade-up-delayed": "fade-up 0.9s ease-out 1.6s both",
       },
     },
   },

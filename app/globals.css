@@ -110,7 +110,8 @@
   }
 
   .animate-\[fade-me-in_\.5s_ease-in-out\],
-  .animate-fade-up {
+  .animate-fade-up,
+  .animate-fade-up-delayed {
     animation: none !important;
   }
 }

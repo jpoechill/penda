@@ -101,24 +101,14 @@ export default function HomePage() {
 
   useEffect(() => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduceMotion) return;
-
-    const startVideo = () => setLoadVideo(true);
-    let idleId: number | undefined;
-    let timeoutId: ReturnType<typeof setTimeout> | undefined;
-
-    if ("requestIdleCallback" in window) {
-      idleId = window.requestIdleCallback(startVideo, { timeout: 1200 });
-    } else {
-      timeoutId = setTimeout(startVideo, 600);
+    if (reduceMotion) {
+      setShowVideo(true);
+      return;
     }
 
-    return () => {
-      if (idleId !== undefined && "cancelIdleCallback" in window) {
-        window.cancelIdleCallback(idleId);
-      }
-      if (timeoutId) clearTimeout(timeoutId);
-    };
+    // Hold the hero photo briefly before starting the walkthrough video
+    const timer = setTimeout(() => setLoadVideo(true), 1500);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -140,7 +130,7 @@ export default function HomePage() {
           {loadVideo && (
             <video
               src="/video/penda_walkthrough_website.mp4"
-              className={`absolute inset-0 h-full w-full object-cover object-[center_15%] transition-opacity duration-700 ${
+              className={`absolute inset-0 h-full w-full object-cover object-[center_15%] transition-opacity duration-1000 ${
                 showVideo ? "opacity-100" : "opacity-0"
               }`}
               autoPlay
@@ -160,7 +150,13 @@ export default function HomePage() {
         </div>
 
         <div className="container-site relative flex min-h-[88vh] flex-col justify-end pb-16 pt-32 md:min-h-[92vh] md:justify-center md:pb-24 md:pt-28">
-          <div className="max-w-2xl animate-fade-up rounded-2xl bg-black/15 px-5 py-5 sm:px-7 sm:py-6">
+          <div
+            className={`max-w-2xl rounded-2xl bg-black/15 px-5 py-5 transition-all duration-1000 sm:px-7 sm:py-6 ${
+              showVideo
+                ? "translate-y-0 opacity-100"
+                : "pointer-events-none translate-y-4 opacity-0"
+            }`}
+          >
             <p className="font-display text-2xl font-semibold tracking-tight text-white md:text-3xl">
               Penda Home Care LLC
             </p>
