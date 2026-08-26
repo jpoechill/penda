@@ -5,7 +5,6 @@ import Header from "../Header";
 import Footer from "../Footer";
 import PageHero from "../components/PageHero";
 import CtaBanner from "../components/CtaBanner";
-import ReviewCta from "../components/ReviewCta";
 import {
   LICENSE_CAPACITY,
   LICENSE_NUMBER,
@@ -19,7 +18,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Learn about Penda Home Care LLC—an Arizona licensed assisted living home (ADHS AL13024H) in Maricopa dedicated to personalized, compassionate senior care.",
   path: "/about",
-  image: "/img/about_cover.png",
+  image: "/img/about_cover.jpg",
 });
 
 const differences = [
@@ -37,7 +36,7 @@ export default function AboutPage() {
       <PageHero
         title="Who we are"
         description="A small private home in Maricopa, AZ where personalized care, dignity, and belonging come first."
-        imageSrc="/img/about_cover.png"
+        imageSrc="/img/about_cover.jpg"
         imageAlt="Penda Home Care care team smiling together"
         imagePosition="object-[center_10%]"
       />
@@ -124,15 +123,15 @@ export default function AboutPage() {
           <div className="mt-12 grid gap-4 sm:grid-cols-3">
             {[
               {
-                src: "/img/services_hero.png",
+                src: "/img/services_hero.jpg",
                 alt: "Caregiver walking arm-in-arm with a senior resident",
               },
               {
-                src: "/img/who_we_are.png",
+                src: "/img/who_we_are.jpg",
                 alt: "Caregivers sharing a photo album with a senior resident",
               },
               {
-                src: "/img/schedule_hero.png",
+                src: "/img/schedule_hero.jpg",
                 alt: "Care director welcoming a family member for a consultation visit",
               },
             ].map((image) => (
@@ -143,6 +142,7 @@ export default function AboutPage() {
                   fill
                   className="object-cover"
                   sizes="(max-width: 640px) 100vw, 33vw"
+                  quality={75}
                 />
               </div>
             ))}
@@ -156,12 +156,6 @@ export default function AboutPage() {
               See our home
             </Link>
           </div>
-        </div>
-      </section>
-
-      <section className="pb-4">
-        <div className="container-site">
-          <ReviewCta />
         </div>
       </section>
 

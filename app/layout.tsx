@@ -5,6 +5,7 @@ import {
   SITE_KEYWORDS,
   SITE_NAME,
   SITE_OG_IMAGE,
+  SITE_PHONE,
   SITE_TAGLINE,
   SITE_URL,
 } from "./lib/site";
@@ -13,23 +14,30 @@ import "./globals.css";
 
 const display = Fraunces({
   subsets: ["latin"],
+  weight: ["600", "700"],
   variable: "--font-display",
   display: "swap",
+  preload: true,
 });
 
 const sans = Source_Sans_3({
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
   variable: "--font-sans",
   display: "swap",
+  preload: true,
 });
+
+const defaultTitle = `${SITE_NAME} | Assisted Living in Maricopa, AZ`;
+const defaultDescription = `${SITE_TAGLINE} Call ${SITE_PHONE} to schedule a tour.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} | Assisted Living in Maricopa, AZ`,
+    default: defaultTitle,
     template: `%s | ${SITE_NAME} · Maricopa, AZ`,
   },
-  description: SITE_TAGLINE,
+  description: defaultDescription,
   applicationName: SITE_NAME,
   keywords: SITE_KEYWORDS,
   authors: [{ name: SITE_NAME, url: SITE_URL }],
@@ -45,8 +53,8 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: `${SITE_NAME} | Assisted Living in Maricopa, AZ`,
-    description: SITE_TAGLINE,
+    title: defaultTitle,
+    description: defaultDescription,
     url: SITE_URL,
     siteName: SITE_NAME,
     locale: "en_US",
@@ -62,8 +70,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} | Assisted Living in Maricopa, AZ`,
-    description: SITE_TAGLINE,
+    title: defaultTitle,
+    description: defaultDescription,
     images: [absoluteUrl(SITE_OG_IMAGE)],
   },
   robots: {
@@ -79,6 +87,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/favicon.ico",
+  },
+  other: {
+    "geo.region": "US-AZ",
+    "geo.placename": "Maricopa",
+    "geo.position": "33.0464864;-112.0078846",
+    ICBM: "33.0464864, -112.0078846",
   },
 };
 

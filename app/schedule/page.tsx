@@ -10,7 +10,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     `Schedule a care consultation or tour of Penda Home Care LLC in Maricopa, AZ. Call ${SITE_PHONE} or email ${SITE_EMAIL} to visit our assisted living home.`,
   path: "/schedule",
-  image: "/img/schedule_hero.png",
+  image: "/img/schedule_hero.jpg",
 });
 
 export default function SchedulePage() {
@@ -20,7 +20,7 @@ export default function SchedulePage() {
       <PageHero
         title="Schedule a care consultation"
         description="Visit our Maricopa, AZ home, meet the care team, and talk through what your loved one needs—at a pace that feels comfortable."
-        imageSrc="/img/schedule_hero.png"
+        imageSrc="/img/schedule_hero.jpg"
         imageAlt="Care director welcoming a family member at the door for a consultation visit"
         imagePosition="object-[center_30%]"
       />

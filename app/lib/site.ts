@@ -5,7 +5,7 @@ export const SITE_NAME_SHORT = "Penda Home Care";
 export const SITE_LOCATION = "Maricopa, AZ";
 export const SITE_LOCATION_FULL = "Maricopa, Arizona";
 export const SITE_TAGLINE =
-  "Personalized assisted living in a warm private home—helping seniors live safely, comfortably, and with dignity.";
+  "Licensed assisted living in a warm private home in Maricopa, AZ—personalized care, dignity, and peace of mind for your family.";
 
 /** Production site URL. Override with NEXT_PUBLIC_SITE_URL when deploying. */
 export const SITE_URL =
@@ -33,14 +33,15 @@ export const SITE_SOCIAL = {
 
 export const SITE_KEYWORDS = [
   "assisted living Maricopa AZ",
-  "Penda Home Care",
-  "senior home care Maricopa",
-  "assisted living home Arizona",
-  "private assisted living",
-  "elder care Maricopa",
-  "AHCCCS ALTCS assisted living",
-  "medication management seniors",
+  "Penda Home Care LLC",
+  "assisted living home Maricopa",
   "senior care Maricopa Arizona",
+  "private assisted living Arizona",
+  "AHCCCS ALTCS assisted living Maricopa",
+  "small assisted living home",
+  "elderly care Maricopa AZ",
+  "medication management assisted living",
+  "schedule assisted living tour Maricopa",
 ];
 
 export const LICENSE_TYPE = "Arizona Licensed Assisted Living Home";

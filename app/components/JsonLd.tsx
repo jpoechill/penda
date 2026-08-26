@@ -1,12 +1,14 @@
 import {
   LICENSE_CAPACITY,
   LICENSE_NUMBER,
+  LICENSE_TYPE,
   SITE_CITY,
   SITE_COUNTRY,
   SITE_EMAIL,
   SITE_MAP_COORDS,
   SITE_NAME,
   SITE_OG_IMAGE,
+  SITE_PHONE,
   SITE_PHONE_TEL,
   SITE_POSTAL,
   SITE_REGION,
@@ -23,12 +25,17 @@ export default function JsonLd() {
     "@type": "LocalBusiness",
     "@id": `${SITE_URL}/#business`,
     name: SITE_NAME,
-    alternateName: "Penda Assisted Living",
+    alternateName: ["Penda Assisted Living", "Penda Home Care"],
     description: SITE_TAGLINE,
     url: SITE_URL,
-    image: absoluteUrl(SITE_OG_IMAGE),
+    image: [
+      absoluteUrl(SITE_OG_IMAGE),
+      absoluteUrl("/img/about_cover.jpg"),
+      absoluteUrl("/img/facilities_hero.jpg"),
+    ],
     telephone: SITE_PHONE_TEL,
     email: SITE_EMAIL,
+    priceRange: "$$",
     address: {
       "@type": "PostalAddress",
       streetAddress: SITE_STREET,
@@ -58,15 +65,27 @@ export default function JsonLd() {
       },
     ],
     sameAs: [SITE_SOCIAL.facebook, SITE_SOCIAL.instagram],
-    areaServed: {
-      "@type": "City",
-      name: "Maricopa",
-      containedInPlace: {
-        "@type": "State",
-        name: "Arizona",
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Maricopa",
+        containedInPlace: { "@type": "State", name: "Arizona" },
       },
-    },
+      { "@type": "AdministrativeArea", name: "Pinal County" },
+    ],
+    knowsAbout: [
+      "Assisted living",
+      "Medication management",
+      "Senior personal care",
+      "AHCCCS",
+      "ALTCS",
+    ],
     additionalProperty: [
+      {
+        "@type": "PropertyValue",
+        name: "License Type",
+        value: LICENSE_TYPE,
+      },
       {
         "@type": "PropertyValue",
         name: "ADHS License Number",
@@ -78,6 +97,13 @@ export default function JsonLd() {
         value: String(LICENSE_CAPACITY),
       },
     ],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: SITE_PHONE_TEL,
+      contactType: "customer service",
+      areaServed: "US-AZ",
+      availableLanguage: ["English"],
+    },
   };
 
   const website = {
@@ -91,6 +117,45 @@ export default function JsonLd() {
     inLanguage: "en-US",
   };
 
+  const faq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Where is Penda Home Care located?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Penda Home Care LLC is a licensed assisted living home at ${SITE_STREET}, ${SITE_CITY}, AZ ${SITE_POSTAL}.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How many residents does Penda Home Care serve?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Penda is licensed for up to ${LICENSE_CAPACITY} residents, allowing for individualized attention in a home-like setting.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Does Penda Home Care accept AHCCCS or ALTCS?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Penda Home Care works with eligible residents through AHCCCS and ALTCS when services are authorized and covered.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How do I schedule a tour or care consultation?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Call ${SITE_PHONE} or visit our schedule page to request a care consultation and tour of the Maricopa home.`,
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <script
@@ -100,6 +165,10 @@ export default function JsonLd() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(website) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}
       />
     </>
   );

@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import SectionHeading from "./components/SectionHeading";
 import CtaBanner from "./components/CtaBanner";
 import ReviewCta from "./components/ReviewCta";
+import { SITE_PHONE, SITE_PHONE_TEL } from "./lib/site";
 
 const services = [
   {
@@ -95,14 +96,30 @@ const steps = [
 ];
 
 export default function HomePage() {
-  const [videoReady, setVideoReady] = useState(false);
+  const [loadVideo, setLoadVideo] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
 
   useEffect(() => {
-    if (!videoReady) return;
-    const timer = setTimeout(() => setShowVideo(true), 1000);
-    return () => clearTimeout(timer);
-  }, [videoReady]);
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) return;
+
+    const startVideo = () => setLoadVideo(true);
+    let idleId: number | undefined;
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
+
+    if ("requestIdleCallback" in window) {
+      idleId = window.requestIdleCallback(startVideo, { timeout: 1200 });
+    } else {
+      timeoutId = setTimeout(startVideo, 600);
+    }
+
+    return () => {
+      if (idleId !== undefined && "cancelIdleCallback" in window) {
+        window.cancelIdleCallback(idleId);
+      }
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, []);
 
   return (
     <main>
@@ -111,28 +128,31 @@ export default function HomePage() {
       {/* 1. Hero */}
       <section className="relative isolate min-h-[88vh] overflow-hidden pt-20 md:min-h-[92vh]">
         <div className="absolute inset-0">
-          {!showVideo && (
-            <Image
-              src="/img/cover_03.jpg"
-              alt="Warm, welcoming living space at Penda Home Care"
-              fill
-              priority
-              className="object-cover"
-              sizes="100vw"
+          <Image
+            src="/img/cover_03.jpg"
+            alt="Residents, family, and caregivers smiling together at Penda Home Care"
+            fill
+            priority
+            unoptimized
+            className="object-cover object-[center_15%]"
+            sizes="100vw"
+          />
+          {loadVideo && (
+            <video
+              src="/video/penda_walkthrough_website.mp4"
+              className={`absolute inset-0 h-full w-full object-cover object-[center_15%] transition-opacity duration-700 ${
+                showVideo ? "opacity-100" : "opacity-0"
+              }`}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              poster="/img/cover_03.jpg"
+              onCanPlayThrough={() => setShowVideo(true)}
+              aria-hidden={!showVideo}
             />
           )}
-          <video
-            src="/video/penda_walkthrough_website.mp4"
-            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
-              showVideo ? "opacity-100" : "opacity-0"
-            }`}
-            autoPlay
-            loop
-            muted
-            playsInline
-            onCanPlayThrough={() => setVideoReady(true)}
-            aria-hidden={!showVideo}
-          />
           <div
             className="absolute inset-0 bg-gradient-to-r from-[#025176]/88 via-[#025176]/55 to-[#025176]/25"
             aria-hidden="true"
@@ -158,8 +178,8 @@ export default function HomePage() {
               <Link href="/schedule" className="btn-on-dark">
                 Schedule a Care Consultation
               </Link>
-              <Link href="/services" className="btn-ghost-on-dark">
-                Explore Our Services
+              <Link href={`tel:${SITE_PHONE_TEL}`} className="btn-ghost-on-dark">
+                Call {SITE_PHONE}
               </Link>
             </div>
           </div>
@@ -196,11 +216,12 @@ export default function HomePage() {
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl lg:order-none">
               <Image
-                src="/img/who_we_are.png"
+                src="/img/who_we_are.jpg"
                 alt="Family and caregivers sharing a warm moment together at home"
                 fill
                 className="object-cover object-right"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                quality={75}
               />
             </div>
           </div>

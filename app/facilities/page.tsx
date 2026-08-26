@@ -13,7 +13,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Tour Penda Home Care LLC’s assisted living home in Maricopa, AZ—5 bedrooms, 3 bathrooms, private and semi-private rooms, community areas, patio, and backyard.",
   path: "/facilities",
-  image: "/img/facilities_hero.png",
+  image: "/img/facilities_hero.jpg",
 });
 
 const gallery = [
@@ -37,7 +37,7 @@ export default function FacilitiesPage() {
       <PageHero
         title="Our living home"
         description="Comfortable rooms and shared spaces in Maricopa, AZ—designed for safety, accessibility, and the feeling of belonging."
-        imageSrc="/img/facilities_hero.png"
+        imageSrc="/img/facilities_hero.jpg"
         imageAlt="Bedroom at Penda Home Care"
         imagePosition="object-[center_40%]"
       />
@@ -104,6 +104,7 @@ export default function FacilitiesPage() {
                   fill
                   className="object-cover transition duration-500 hover:scale-[1.02]"
                   sizes="(max-width: 640px) 100vw, 50vw"
+                  quality={75}
                 />
               </div>
             ))}

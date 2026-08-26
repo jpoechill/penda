@@ -67,13 +67,13 @@ export const homeMetadata: Metadata = {
   title: {
     absolute: `${SITE_NAME} | Assisted Living in Maricopa, AZ`,
   },
-  description: SITE_TAGLINE,
+  description: `${SITE_TAGLINE} Schedule a care consultation today.`,
   alternates: {
     canonical: SITE_URL,
   },
   openGraph: {
     title: `${SITE_NAME} | Assisted Living in Maricopa, AZ`,
-    description: SITE_TAGLINE,
+    description: `${SITE_TAGLINE} Schedule a care consultation today.`,
     url: SITE_URL,
     siteName: SITE_NAME,
     locale: "en_US",
@@ -90,7 +90,7 @@ export const homeMetadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `${SITE_NAME} | Assisted Living in Maricopa, AZ`,
-    description: SITE_TAGLINE,
+    description: `${SITE_TAGLINE} Schedule a care consultation today.`,
     images: [absoluteUrl(SITE_OG_IMAGE)],
   },
 };

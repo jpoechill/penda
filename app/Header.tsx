@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { SITE_PHONE, SITE_PHONE_TEL } from "./lib/site";
 
 const navLinks = [
   { href: "/about", label: "About" },
@@ -87,7 +88,7 @@ export default function Header() {
             <Link href="/schedule" className="btn-secondary !py-2.5 !px-4 text-[0.95rem]">
               Schedule a Consultation
             </Link>
-            <Link href="tel:5204577645" className="btn-primary !py-2.5 !px-4 text-[0.95rem]">
+            <Link href={`tel:${SITE_PHONE_TEL}`} className="btn-primary !py-2.5 !px-4 text-[0.95rem]">
               Call Now
             </Link>
           </div>
@@ -130,8 +131,12 @@ export default function Header() {
             <Link href="/schedule" className="btn-secondary w-full" onClick={() => setShowMenu(false)}>
               Schedule a Consultation
             </Link>
-            <Link href="tel:5204577645" className="btn-primary w-full" onClick={() => setShowMenu(false)}>
-              Call (520) 457-7645
+            <Link
+              href={`tel:${SITE_PHONE_TEL}`}
+              className="btn-primary w-full"
+              onClick={() => setShowMenu(false)}
+            >
+              Call {SITE_PHONE}
             </Link>
           </div>
         </div>

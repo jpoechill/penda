@@ -19,11 +19,13 @@ export default function PageHero({
   return (
     <div className="pt-[4.75rem] md:pt-[5.5rem]">
       <header className="relative isolate min-h-[44vh] overflow-hidden md:min-h-[50vh]">
+        {/* unoptimized: heroes are already compressed JPEGs — skip slow on-demand re-encode */}
         <Image
           src={imageSrc}
           alt={imageAlt}
           fill
           priority
+          unoptimized
           className={`object-cover ${imagePosition}`}
           sizes="100vw"
         />
@@ -33,11 +35,11 @@ export default function PageHero({
         />
         <div className="container-site relative flex min-h-[44vh] flex-col justify-end pb-12 pt-16 md:min-h-[50vh] md:pb-16 md:pt-20">
           <div className="max-w-3xl rounded-2xl bg-black/15 px-5 py-5 sm:px-7 sm:py-6">
-            <h1 className="font-display text-4xl font-semibold tracking-tight text-white md:text-5xl">
+            <h1 className="max-w-3xl font-display text-4xl font-semibold tracking-tight text-white md:text-5xl">
               {title}
             </h1>
             {description && (
-              <p className="mt-4 text-lg text-white/95 md:text-xl">{description}</p>
+              <p className="mt-4 max-w-2xl text-lg text-white/95 md:text-xl">{description}</p>
             )}
           </div>
         </div>

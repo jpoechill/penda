@@ -12,7 +12,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Explore Penda Home Care LLC services in Maricopa, AZ—comfortable living, accessibility, safety, transportation, medication management, prepared meals, and AHCCCS/ALTCS support.",
   path: "/services",
-  image: "/img/services_hero.png",
+  image: "/img/services_hero.jpg",
 });
 
 const services = [
@@ -67,7 +67,7 @@ export default function ServicesPage() {
       <PageHero
         title="Our care services"
         description="Practical, compassionate support in Maricopa, AZ that helps seniors live safely, comfortably, and with dignity—day by day."
-        imageSrc="/img/services_hero.png"
+        imageSrc="/img/services_hero.jpg"
         imageAlt="Caregiver walking arm-in-arm with a senior resident in a bright, welcoming home"
       />
 
@@ -88,6 +88,7 @@ export default function ServicesPage() {
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 33vw"
+                    quality={75}
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-6">

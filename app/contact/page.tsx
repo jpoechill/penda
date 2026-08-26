@@ -24,7 +24,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     `Contact Penda Home Care LLC in Maricopa, AZ. Call ${SITE_PHONE} or email ${SITE_EMAIL} to talk with our care team about assisted living.`,
   path: "/contact",
-  image: "/img/contact_hero.png",
+  image: "/img/contact_hero.jpg",
 });
 
 const contactItems = [
@@ -82,7 +82,7 @@ export default function ContactPage() {
       <PageHero
         title="Get in touch"
         description="Reach Penda Home Care LLC in Maricopa, AZ—whether you’re exploring care options, scheduling a visit, or have questions."
-        imageSrc="/img/contact_hero.png"
+        imageSrc="/img/contact_hero.jpg"
         imageAlt="Welcoming entry and care environment in Maricopa, AZ"
         imagePosition="object-[center_45%]"
       />

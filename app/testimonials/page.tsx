@@ -10,7 +10,7 @@ export const metadata: Metadata = pageMetadata({
   description:
     "Family stories from Penda Home Care LLC in Maricopa, AZ are coming soon. Contact us to learn more about personalized assisted living for your loved one.",
   path: "/testimonials",
-  image: "/img/who_we_are.png",
+  image: "/img/who_we_are.jpg",
 });
 
 export default function TestimonialsPage() {
@@ -20,7 +20,7 @@ export default function TestimonialsPage() {
       <PageHero
         title="Family stories"
         description="We’re gathering real experiences from families we serve in Maricopa, Arizona."
-        imageSrc="/img/who_we_are.png"
+        imageSrc="/img/who_we_are.jpg"
         imageAlt="Meaningful moments of care and companionship"
         imagePosition="object-[center_30%]"
       />
