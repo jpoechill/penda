@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import SectionHeading from "./components/SectionHeading";
 import CtaBanner from "./components/CtaBanner";
 import ReviewCta from "./components/ReviewCta";
+import FacilitiesPreview from "./components/FacilitiesPreview";
 import { SITE_PHONE, SITE_PHONE_TEL } from "./lib/site";
 
 const services = [
@@ -235,7 +236,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. Services overview */}
+      {/* 3. Home preview */}
+      <FacilitiesPreview />
+
+      {/* 4. Services overview */}
       <section className="section-pad bg-[var(--warm-wash)]" aria-labelledby="services-heading">
         <div className="container-site">
           <SectionHeading
@@ -283,7 +287,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. Benefits */}
+      {/* 5. Benefits */}
       <section className="section-pad bg-surface" aria-labelledby="benefits-heading">
         <div className="container-site">
           <SectionHeading
@@ -306,7 +310,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. How care begins */}
+      {/* 6. How care begins */}
       <section className="section-pad bg-primary-soft/60" aria-labelledby="how-heading">
         <div className="container-site">
           <SectionHeading
@@ -327,14 +331,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. Review */}
+      {/* 7. Review */}
       <section className="section-pad bg-surface" aria-label="Google review">
         <div className="container-site">
           <ReviewCta />
         </div>
       </section>
 
-      {/* 7. Final CTA */}
+      {/* 8. Final CTA */}
       <CtaBanner />
 
       <Footer />

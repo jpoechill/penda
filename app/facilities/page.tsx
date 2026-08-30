@@ -7,6 +7,7 @@ import PageHero from "../components/PageHero";
 import CtaBanner from "../components/CtaBanner";
 import SectionHeading from "../components/SectionHeading";
 import { pageMetadata } from "../lib/seo";
+import { facilitiesIntro, gallery, homeDetails } from "../lib/facilities";
 
 export const metadata: Metadata = pageMetadata({
   title: "Our Assisted Living Home",
@@ -15,20 +16,6 @@ export const metadata: Metadata = pageMetadata({
   path: "/facilities",
   image: "/img/facilities_hero.jpg",
 });
-
-const gallery = [
-  {
-    src: "/photography/master_bedroom_2_123026.jpg",
-    alt: "Master bedroom living accommodation",
-    span: "col-span-2",
-  },
-  { src: "/photography/living_01.jpg", alt: "Living room seating area", span: "" },
-  { src: "/img/two_beds.jpg", alt: "Comfortable bedroom with two beds", span: "" },
-  { src: "/photography/living_03.jpg", alt: "Bright shared living space", span: "" },
-  { src: "/photography/living_02.jpg", alt: "Home living area at Penda", span: "" },
-  { src: "/img/backyard_01.jpg", alt: "Outdoor backyard space", span: "" },
-  { src: "/img/backyard_02.jpg", alt: "Landscaped outdoor area", span: "" },
-];
 
 export default function FacilitiesPage() {
   return (
@@ -46,32 +33,18 @@ export default function FacilitiesPage() {
         <div className="container-site">
           <SectionHeading
             align="left"
-            title="A place that feels like home"
-            description="At Penda Assisted Living, we take pride in providing a comfortable, safe, and welcoming environment for our residents. Our home is thoughtfully designed to meet the unique needs of seniors while fostering community and independence."
+            title={facilitiesIntro.title}
+            description={facilitiesIntro.description}
           />
 
           <div className="prose-care max-w-3xl space-y-4">
-            <p>
-              Our home includes 5 bedrooms and 3 bathrooms, with private and semi-private master rooms
-              designed for comfort and accessibility. Shared spaces—including a community area, dining
-              room, full kitchen, patio, and backyard—encourage connection and help residents feel truly
-              at home.
-            </p>
+            <p>{facilitiesIntro.body}</p>
           </div>
 
           <aside className="mt-10 rounded-2xl border border-dashed border-primary/40 bg-primary-soft/50 p-6 md:p-8">
             <h2 className="font-display text-xl font-semibold text-foreground">Home details</h2>
             <ul className="mt-5 grid gap-3 sm:grid-cols-2 sm:gap-x-8">
-              {[
-                "5 bedrooms",
-                "3 bathrooms",
-                "Private & semi-private master rooms",
-                "Community area",
-                "Dining room",
-                "Full kitchen",
-                "Patio",
-                "Backyard",
-              ].map((item) => (
+              {homeDetails.map((item) => (
                 <li key={item} className="flex gap-3 text-base leading-relaxed text-muted">
                   <span
                     className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
@@ -98,13 +71,14 @@ export default function FacilitiesPage() {
                 key={item.src}
                 className={`relative aspect-[4/3] overflow-hidden rounded-2xl ${item.span}`}
               >
+                {/* unoptimized: gallery JPEGs are pre-sized — skip Next.js 30-day image cache */}
                 <Image
                   src={item.src}
                   alt={item.alt}
                   fill
+                  unoptimized
                   className="object-cover transition duration-500 hover:scale-[1.02]"
                   sizes="(max-width: 640px) 100vw, 50vw"
-                  quality={75}
                 />
               </div>
             ))}
