@@ -38,6 +38,7 @@ export default function Header() {
   }, [showMenu]);
 
   return (
+    <>
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         scrolled || showMenu
@@ -109,31 +110,37 @@ export default function Header() {
           </button>
         </div>
       </div>
+    </header>
 
       {showMenu && (
         <div
           id="mobile-menu"
-          className="fixed inset-0 top-[4.5rem] z-40 overflow-y-auto bg-white px-5 pb-10 pt-4 shadow-lg md:top-[5.25rem] lg:hidden"
+          className="fixed inset-x-0 top-[4.5rem] z-40 border-b border-border bg-white px-5 pb-[max(1rem,env(safe-area-inset-bottom))] pt-3 shadow-lg md:top-[5.25rem] lg:hidden"
         >
-          <nav className="flex flex-col gap-1" aria-label="Mobile">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="rounded-lg px-3 py-3.5 text-lg text-foreground hover:bg-primary-soft"
-                onClick={() => setShowMenu(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <nav className="flex flex-col" aria-label="Mobile">
+            {navLinks.map((link) => {
+              const active = pathname === link.href.replace("/", "");
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`rounded-lg px-3 py-2.5 text-base leading-snug transition-colors hover:bg-primary-soft ${
+                    active ? "font-semibold text-primary" : "text-foreground"
+                  }`}
+                  onClick={() => setShowMenu(false)}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
-          <div className="mt-6 flex flex-col gap-3">
-            <Link href="/schedule" className="btn-secondary w-full" onClick={() => setShowMenu(false)}>
+          <div className="mt-5 flex flex-col gap-2.5 border-t border-border pt-5">
+            <Link href="/schedule" className="btn-secondary w-full !py-3" onClick={() => setShowMenu(false)}>
               Schedule a Consultation
             </Link>
             <Link
               href={`tel:${SITE_PHONE_TEL}`}
-              className="btn-primary w-full"
+              className="btn-primary w-full !py-3"
               onClick={() => setShowMenu(false)}
             >
               Call {SITE_PHONE}
@@ -141,6 +148,6 @@ export default function Header() {
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 }
