@@ -15,13 +15,15 @@ export const metadata: Metadata = pageMetadata({
   image: "/img/services_hero.jpg",
 });
 
+const SERVICE_IMAGE_VERSION = "20260902-living";
+
 const services = [
   {
     title: "Comfortable Living Spaces",
     description:
       "We prioritize creating comfortable living spaces that feel like home. Each room is thoughtfully designed to balance privacy with accessibility, offering cozy furnishings, personalized touches, and ample natural light.",
-    image: "/img/comfortable_living.png",
-    alt: "Comfortable living room with cozy seating and natural light",
+    image: `/img/comfortable_living.png?v=${SERVICE_IMAGE_VERSION}`,
+    alt: "Illustration of a cozy armchair by a sunny window with personalized home touches",
   },
   {
     title: "Accessibility for All",
@@ -69,6 +71,7 @@ export default function ServicesPage() {
         description="Practical, compassionate support in Maricopa, AZ that helps seniors live safely, comfortably, and with dignity—day by day."
         imageSrc="/img/services_hero.jpg"
         imageAlt="Caregiver walking arm-in-arm with a senior resident in a bright, welcoming home"
+        imagePosition="object-[center_18%]"
       />
 
       <section className="section-pad bg-surface">
@@ -82,13 +85,14 @@ export default function ServicesPage() {
             {services.map((service) => (
               <article key={service.title} className="flex flex-col overflow-hidden rounded-2xl border border-border bg-white">
                 <div className="relative aspect-[4/3]">
+                  {/* unoptimized: skip Next image cache so replaced card art shows immediately */}
                   <Image
                     src={service.image}
                     alt={service.alt}
                     fill
+                    unoptimized
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    quality={75}
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-6">

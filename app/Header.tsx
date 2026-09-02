@@ -30,13 +30,6 @@ export default function Header() {
     setShowMenu(false);
   }, [pathname]);
 
-  useEffect(() => {
-    document.body.style.overflow = showMenu ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [showMenu]);
-
   return (
     <>
     <header
