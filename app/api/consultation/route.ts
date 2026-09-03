@@ -5,7 +5,8 @@ import {
   trimField,
   validateConsultationFields,
 } from "../../lib/consultation";
-import { SITE_EMAIL, SITE_NAME } from "../../lib/site";
+import { formatResendFrom } from "../../lib/email";
+import { SITE_EMAIL } from "../../lib/site";
 
 export const runtime = "nodejs";
 
@@ -125,9 +126,7 @@ export async function POST(request: Request) {
   }
 
   const to = process.env.CONSULTATION_TO_EMAIL?.trim() || SITE_EMAIL;
-  const from =
-    process.env.RESEND_FROM_EMAIL?.trim() ||
-    `${SITE_NAME} <onboarding@resend.dev>`;
+  const from = formatResendFrom();
 
   const lines = [
     `New care consultation request from the website.`,
