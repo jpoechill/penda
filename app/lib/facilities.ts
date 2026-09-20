@@ -188,19 +188,19 @@ export const homeLocations: HomeLocation[] = [
       "Penda Home Care’s new assisted living home on W. Santa Monica Drive in Maricopa, AZ is open and welcoming residents. Private financing only. Space is available. Schedule a visit today.",
     heroTitle: "W. Santa Monica Drive",
     heroDescription:
-      "Our newest assisted living home in Maricopa: open now, thoughtfully prepared, and ready to welcome your family.",
-    eyebrow: "Now open · New Maricopa location",
+      "A brand-new Maricopa assisted living home with rooms available now.",
+    eyebrow: "New home · Rooms available",
     introTitle: "A fresh start in a warm, private home",
     introDescription:
       "Our Santa Monica Drive home is our newest residence, created for families who want personalized assisted living in a calm, home-like setting, without the feel of a large facility.",
     introBody: [
       "From the first walk-through, you’ll notice the difference: soft light, inviting common areas, and a care team focused on dignity, routine, and genuine connection. This is a place where mornings can begin slowly, meals are shared around a real table, and evenings feel quiet and safe.",
-      "We’re open and actively welcoming new residents. If you’ve been searching for an available assisted living home in Maricopa with room to settle in thoughtfully, we’d love to show you around.",
+      "We are open and currently accepting new residents. If you are looking for available space in a small Maricopa assisted living home, we welcome you to schedule a visit.",
     ],
     detailsHeading: "What you’ll find here",
     details: [
       "Newly opened Maricopa residence",
-      "Space available for new residents",
+      "Rooms available for new residents",
       "Private & semi-private rooms",
       "Comfortable shared living areas",
       "Home-style dining",
@@ -210,23 +210,24 @@ export const homeLocations: HomeLocation[] = [
     ],
     highlights: [
       {
-        title: "Now open",
+        title: "New home",
         description:
-          "Our Santa Monica Drive home is open and ready to welcome residents and their families.",
+          "Santa Monica Drive is our newest Maricopa residence, thoughtfully prepared for families seeking a fresh start in care.",
       },
       {
-        title: "Space available",
+        title: "Spaces available",
         description:
-          "Availability is open right now. Reach out soon so we can help you explore a good fit.",
+          "Rooms are open now. Reach out to reserve a tour and discuss current availability.",
       },
       {
         title: "Private financing only",
         description:
-          "This location accepts private pay only. We’re happy to walk you through options during a visit.",
+          "This location accepts private-pay admissions only. We are happy to walk through options during a visit.",
       },
     ],
-    financingNote:
-      "Please note: the W. Santa Monica Drive home is available for private financing only.",
+    availabilityHeading: "New home with rooms available",
+    availabilityNote:
+      "Our W. Santa Monica Drive residence is open and accepting residents. Spaces are available now for private-pay admissions.",
     heroImageSrc: `/photography/santa_monica_bedroom_01.jpg?v=${SANTA_MONICA_PHOTO_VERSION}`,
     heroImageAlt: "Warm, modern bedroom at Penda Home Care on W. Santa Monica Drive",
     heroImagePosition: "object-[center_45%]",

@@ -52,11 +52,24 @@ export default function HomeFacilityPage({ home }: HomeFacilityPageProps) {
           )}
 
           {home.availabilityNote && (
-            <aside className="mt-8 rounded-2xl bg-primary-soft/70 px-6 py-5 text-base leading-relaxed text-foreground md:px-8">
-              <p className="font-semibold text-primary-dark">
+            <aside className="mt-10 overflow-hidden rounded-2xl border border-primary/25 bg-primary-dark px-6 py-6 text-white md:px-8 md:py-7">
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-white/70">
+                Now accepting residents
+              </p>
+              <p className="mt-2 font-display text-2xl font-semibold tracking-tight md:text-3xl">
                 {home.availabilityHeading ?? "Visit this home"}
               </p>
-              <p className="mt-2 text-muted">{home.availabilityNote}</p>
+              <p className="mt-3 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg">
+                {home.availabilityNote}
+              </p>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                <Link href="/schedule" className="btn-on-dark !py-2.5 !px-5 text-sm">
+                  {home.primaryCtaLabel}
+                </Link>
+                <Link href="/contact" className="btn-ghost-on-dark !py-2.5 !px-5 text-sm">
+                  {home.secondaryCtaLabel}
+                </Link>
+              </div>
             </aside>
           )}
 
