@@ -17,9 +17,12 @@ import {
   SITE_TAGLINE,
   SITE_URL,
 } from "../lib/site";
+import { homeLocations } from "../lib/facilities";
 import { absoluteUrl } from "../lib/seo";
 
 export default function JsonLd() {
+  const santaMonica = homeLocations.find((home) => home.id === "santa-monica");
+
   const localBusiness = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -32,6 +35,7 @@ export default function JsonLd() {
       absoluteUrl(SITE_OG_IMAGE),
       absoluteUrl("/img/about_cover.jpg"),
       absoluteUrl("/img/facilities_hero.jpg"),
+      absoluteUrl("/photography/santa_monica_bedroom_01.jpg"),
     ],
     telephone: SITE_PHONE_TEL,
     email: SITE_EMAIL,
@@ -50,6 +54,23 @@ export default function JsonLd() {
       longitude: SITE_MAP_COORDS.lng,
     },
     hasMap: `https://www.google.com/maps?q=${SITE_MAP_COORDS.lat},${SITE_MAP_COORDS.lng}`,
+    department: santaMonica
+      ? [
+          {
+            "@type": "LocalBusiness",
+            name: `${SITE_NAME} · ${santaMonica.navLabel}`,
+            url: absoluteUrl(santaMonica.path),
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: santaMonica.street,
+              addressLocality: SITE_CITY,
+              addressRegion: SITE_REGION,
+              postalCode: SITE_POSTAL,
+              addressCountry: SITE_COUNTRY,
+            },
+          },
+        ]
+      : undefined,
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
@@ -126,7 +147,7 @@ export default function JsonLd() {
         name: "Where is Penda Home Care located?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Penda Home Care LLC is a licensed assisted living home at ${SITE_STREET}, ${SITE_CITY}, AZ ${SITE_POSTAL}.`,
+          text: `Penda Home Care LLC operates assisted living homes in Maricopa, AZ, including ${SITE_STREET} and ${santaMonica?.street ?? "W. Santa Monica Drive"}.`,
         },
       },
       {
@@ -134,7 +155,7 @@ export default function JsonLd() {
         name: "How many residents does Penda Home Care serve?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Penda is licensed for up to ${LICENSE_CAPACITY} residents, allowing for individualized attention in a home-like setting.`,
+          text: `Penda is licensed for up to ${LICENSE_CAPACITY} residents per home, allowing for individualized attention in a home-like setting.`,
         },
       },
       {
@@ -142,7 +163,7 @@ export default function JsonLd() {
         name: "Does Penda Home Care accept AHCCCS or ALTCS?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Penda Home Care works with eligible residents through AHCCCS and ALTCS when services are authorized and covered.",
+          text: "Penda Home Care works with eligible residents through AHCCCS and ALTCS when services are authorized and covered. Availability of public funding may vary by residence; the W. Santa Monica Drive home currently accepts private-pay admissions only.",
         },
       },
       {
@@ -150,7 +171,7 @@ export default function JsonLd() {
         name: "How do I schedule a tour or care consultation?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Call ${SITE_PHONE} or visit our schedule page to request a care consultation and tour of the Maricopa home.`,
+          text: `Call ${SITE_PHONE} or visit our schedule page to request a care consultation and tour of a Maricopa home.`,
         },
       },
     ],

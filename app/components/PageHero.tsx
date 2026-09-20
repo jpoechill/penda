@@ -19,7 +19,7 @@ export default function PageHero({
   return (
     <div className="pt-[4.75rem] md:pt-[5.5rem]">
       <header className="relative isolate min-h-[44vh] overflow-hidden md:min-h-[50vh]">
-        {/* unoptimized: heroes are already compressed JPEGs — skip slow on-demand re-encode */}
+        {/* unoptimized: heroes are already compressed JPEGs  -  skip slow on-demand re-encode */}
         <Image
           src={imageSrc}
           alt={imageAlt}

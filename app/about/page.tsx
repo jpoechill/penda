@@ -16,13 +16,13 @@ import { pageMetadata } from "../lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "About Us",
   description:
-    "Learn about Penda Home Care LLC—an Arizona licensed assisted living home (ADHS AL13024H) in Maricopa dedicated to personalized, compassionate senior care.",
+    "Learn about Penda Home Care LLC, an Arizona licensed assisted living home (ADHS AL13024H) in Maricopa dedicated to personalized, compassionate senior care.",
   path: "/about",
   image: "/img/about_cover.jpg",
 });
 
 const differences = [
-  "A small private home—not a large institution",
+  "A small private home, not a large institution",
   "Care tailored to each resident’s needs and preferences",
   "Focus on comfort, connection, and everyday dignity",
 ];
@@ -53,14 +53,14 @@ export default function AboutPage() {
             <p className="mt-5 prose-care">
               Penda Home Care LLC offers a home-like experience grounded in respect, loyalty, and
               integrity. Our caregivers provide personalized support so seniors can live
-              comfortably—with their preferences and well-being at the center of every day.
+              comfortably, with their preferences and well-being at the center of every day.
             </p>
 
             <h3 className="mt-12 font-display text-2xl font-semibold text-foreground">Our story</h3>
             <p className="mt-4 prose-care">
               Penda began because large care facilities often lack personal connection. Drawing on
               their own experiences with elderly loved ones, our founders set out to create a more
-              intimate home—where physical care, emotional well-being, and individual preferences
+              intimate home, where physical care, emotional well-being, and individual preferences
               all matter.
             </p>
 
@@ -75,17 +75,6 @@ export default function AboutPage() {
                 </li>
               ))}
             </ul>
-            <p className="mt-5 text-base text-muted">
-              Explore how we support daily living on our{" "}
-              <Link href="/services" className="font-semibold text-primary hover:underline">
-                Services
-              </Link>{" "}
-              page, or see the residence on{" "}
-              <Link href="/facilities" className="font-semibold text-primary hover:underline">
-                Our Home
-              </Link>
-              .
-            </p>
 
             <h3 className="mt-12 font-display text-2xl font-semibold text-foreground">Our values</h3>
             <ul className="mt-5 flex flex-wrap gap-3">
@@ -152,8 +141,8 @@ export default function AboutPage() {
             <Link href="/schedule" className="btn-primary">
               Schedule a Care Consultation
             </Link>
-            <Link href="/facilities" className="btn-secondary">
-              See our home
+            <Link href="/facilities/portis" className="btn-secondary">
+              See our homes
             </Link>
           </div>
         </div>

@@ -1,25 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
+import { homeLocations } from "./lib/facilities";
 import {
   GOOGLE_REVIEW_URL,
   LICENSE_CAPACITY,
   LICENSE_NUMBER,
   LICENSE_TYPE,
-  SITE_CITY,
   SITE_EMAIL,
   SITE_FAX,
   SITE_NAME,
   SITE_PHONE,
   SITE_PHONE_TEL,
-  SITE_POSTAL,
   SITE_SOCIAL,
-  SITE_STREET,
 } from "./lib/site";
 
 const footerLinks = [
   { href: "/about", label: "About Us" },
   { href: "/services", label: "Services" },
-  { href: "/facilities", label: "Our Home" },
+  { href: "/facilities/portis", label: "W. Portis" },
+  { href: "/facilities/santa-monica", label: "W. Santa Monica" },
   { href: "/testimonials", label: "Stories" },
   { href: "/schedule", label: "Schedule a Visit" },
   { href: "/contact", label: "Contact" },
@@ -37,10 +36,10 @@ export default function Footer() {
               className="mx-auto flex w-fit justify-center"
             >
               <Image
-                src="/logo_full_on_dark_clr_02.png"
+                src="/penda_mark.png"
                 alt={SITE_NAME}
-                width={400}
-                height={133}
+                width={160}
+                height={160}
                 className="h-24 w-auto md:h-28 lg:h-32"
               />
             </Link>
@@ -70,9 +69,24 @@ export default function Footer() {
           <div>
             <h2 className="font-display text-xl font-semibold">Visit &amp; call</h2>
             <address className="mt-4 not-italic text-white/85 leading-relaxed">
-              {SITE_STREET}
-              <br />
-              {SITE_CITY}, AZ {SITE_POSTAL}
+              {homeLocations.map((home, index) => (
+                <span key={home.id}>
+                  {index > 0 && (
+                    <>
+                      <br />
+                      <br />
+                    </>
+                  )}
+                  <Link
+                    href={home.path}
+                    className="hover:text-white underline-offset-4 hover:underline"
+                  >
+                    {home.street}
+                  </Link>
+                  <br />
+                  {home.cityLine}
+                </span>
+              ))}
               <br />
               <br />
               <a

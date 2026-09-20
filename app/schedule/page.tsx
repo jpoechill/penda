@@ -20,7 +20,7 @@ export default function SchedulePage() {
       <Header />
       <PageHero
         title="Schedule a care consultation"
-        description="Visit our Maricopa, AZ home, meet the care team, and talk through what your loved one needs—at a pace that feels comfortable."
+        description="Visit our Maricopa, AZ home, meet the care team, and talk through what your loved one needs, at a pace that feels comfortable."
         imageSrc="/img/schedule_hero.jpg"
         imageAlt="Care director welcoming a family member at the door for a consultation visit"
         imagePosition="object-[center_30%]"

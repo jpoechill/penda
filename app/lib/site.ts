@@ -5,7 +5,7 @@ export const SITE_NAME_SHORT = "Penda Home Care";
 export const SITE_LOCATION = "Maricopa, AZ";
 export const SITE_LOCATION_FULL = "Maricopa, Arizona";
 export const SITE_TAGLINE =
-  "Licensed assisted living in a warm private home in Maricopa, AZ—personalized care, dignity, and peace of mind for your family.";
+  "Licensed assisted living in a warm private home in Maricopa, AZ, with personalized care, dignity, and peace of mind for your family.";
 
 /** Production site URL. Override with NEXT_PUBLIC_SITE_URL when deploying. */
 export const SITE_URL =
@@ -63,7 +63,13 @@ export const NAV_ROUTES = [
   { path: "/", label: "Home", changeFrequency: "weekly" as const, priority: 1 },
   { path: "/about", label: "About", changeFrequency: "monthly" as const, priority: 0.8 },
   { path: "/services", label: "Services", changeFrequency: "monthly" as const, priority: 0.9 },
-  { path: "/facilities", label: "Our Home", changeFrequency: "monthly" as const, priority: 0.8 },
+  { path: "/facilities/portis", label: "W. Portis Drive", changeFrequency: "monthly" as const, priority: 0.8 },
+  {
+    path: "/facilities/santa-monica",
+    label: "W. Santa Monica Drive",
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  },
   { path: "/testimonials", label: "Stories", changeFrequency: "weekly" as const, priority: 0.6 },
   { path: "/schedule", label: "Schedule", changeFrequency: "monthly" as const, priority: 0.9 },
   { path: "/contact", label: "Contact", changeFrequency: "monthly" as const, priority: 0.8 },

@@ -110,7 +110,7 @@ export default function ConsultationForm() {
           Request received
         </h2>
         <p className="mt-3 prose-care">
-          Thank you — we’ll follow up soon to schedule your care consultation.
+          Thank you. We’ll follow up soon to schedule your care consultation.
           Prefer to talk now?{" "}
           <a href={`tel:${SITE_PHONE_TEL}`} className="font-semibold text-primary hover:underline">
             Call {SITE_PHONE}
@@ -150,7 +150,7 @@ export default function ConsultationForm() {
       onSubmit={onSubmit}
       noValidate
     >
-      {/* Honeypot — hidden from people, visible to simple bots */}
+      {/* Honeypot  -  hidden from people, visible to simple bots */}
       <div className="absolute -left-[9999px] top-auto h-0 w-0 overflow-hidden" aria-hidden="true">
         <label>
           Company

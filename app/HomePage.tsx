@@ -15,7 +15,7 @@ const services = [
   {
     title: "Comfortable Living Spaces",
     description:
-      "Thoughtfully arranged rooms with cozy furnishings and natural light—spaces that feel personal, private, and truly like home.",
+      "Thoughtfully arranged rooms with cozy furnishings and natural light: spaces that feel personal, private, and truly like home.",
     icon: "/svg/sofa.svg",
   },
   {
@@ -45,7 +45,7 @@ const services = [
   {
     title: "Prepared Meals",
     description:
-      "Fresh, balanced meals with dietary accommodations—heart-healthy, low-sodium, diabetic-friendly, and customized options.",
+      "Fresh, balanced meals with dietary accommodations: heart-healthy, low-sodium, diabetic-friendly, and customized options.",
     icon: "/svg/meals.svg",
   },
 ];
@@ -54,7 +54,7 @@ const benefits = [
   {
     title: "Safety without losing independence",
     description:
-      "Support with daily living so your loved one can stay as independent as possible—while you know they’re looked after.",
+      "Support with daily living so your loved one can stay as independent as possible, while you know they’re looked after.",
   },
   {
     title: "Comfort that feels familiar",
@@ -64,12 +64,12 @@ const benefits = [
   {
     title: "Dignity in every interaction",
     description:
-      "Caregivers who listen, respect preferences, and treat each resident like family—because personalized care starts with respect.",
+      "Caregivers who listen, respect preferences, and treat each resident like family, because personalized care starts with respect.",
   },
   {
     title: "Peace of mind for families",
     description:
-      "Clear communication and dependable routines help you focus on being a daughter, son, or spouse—not carrying every care task alone.",
+      "Clear communication and dependable routines help you focus on being a daughter, son, or spouse, not carrying every care task alone.",
   },
 ];
 
@@ -87,7 +87,7 @@ const steps = [
   {
     step: "03",
     title: "Plan care together",
-    description: "We tailor support around daily routines, preferences, and wellness goals—always with dignity first.",
+    description: "We tailor support around daily routines, preferences, and wellness goals, always with dignity first.",
   },
   {
     step: "04",
@@ -179,7 +179,7 @@ export default function HomePage() {
               Care that helps your loved one live safely and comfortably at home
             </h1>
             <p className="mt-5 max-w-xl text-lg text-white/90 md:text-xl">
-              Personalized assisted living in a warm private home in Maricopa, AZ—where dignity,
+              Personalized assisted living in a warm private home in Maricopa, AZ, where dignity,
               independence, and everyday comfort come first.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -194,7 +194,41 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. Introduction */}
+      {/* 2. New location notice */}
+      <section
+        className="border-b border-border bg-primary-dark"
+        aria-labelledby="new-location-heading"
+      >
+        <div className="container-site py-8 md:py-10">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-10">
+            <div className="max-w-2xl">
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-white/70">
+                Now open · Rooms available
+              </p>
+              <h2
+                id="new-location-heading"
+                className="mt-2 font-display text-2xl font-semibold tracking-tight text-white md:text-3xl"
+              >
+                W. Santa Monica Drive
+              </h2>
+              <p className="mt-3 text-base leading-relaxed text-white/85 md:text-lg">
+                Our newest Maricopa residence is accepting residents. Current openings are available
+                for private-pay admissions.
+              </p>
+            </div>
+            <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
+              <Link href="/facilities/santa-monica" className="btn-on-dark !py-2.5 !px-5 text-sm">
+                View this residence
+              </Link>
+              <Link href="/schedule" className="btn-ghost-on-dark !py-2.5 !px-5 text-sm">
+                Inquire about availability
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Introduction */}
       <section className="section-pad bg-surface" aria-labelledby="intro-heading">
         <div className="container-site">
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
@@ -215,7 +249,7 @@ export default function HomePage() {
               </p>
               <p className="mt-4 prose-care">
                 Based in Maricopa, Arizona, we provide personalized support tailored to each
-                person’s needs—so seniors can live with comfort, safety, and meaningful connection
+                person’s needs, so seniors can live with comfort, safety, and meaningful connection
                 right here in our local community.
               </p>
               <Link href="/about" className="btn-secondary mt-8">
@@ -236,10 +270,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. Home preview */}
+      {/* 4. Home preview */}
       <FacilitiesPreview />
 
-      {/* 4. Services overview */}
+      {/* 5. Services overview */}
       <section className="section-pad bg-[var(--warm-wash)]" aria-labelledby="services-heading">
         <div className="container-site">
           <SectionHeading
@@ -287,13 +321,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. Benefits */}
+      {/* 6. Benefits */}
       <section className="section-pad bg-surface" aria-labelledby="benefits-heading">
         <div className="container-site">
           <SectionHeading
             id="benefits-heading"
             eyebrow="Why families choose Penda"
-            title="Care that supports clients—and the people who love them"
+            title="Care that supports clients and the people who love them"
             description="Whether you’re seeking support for yourself or for a parent, we focus on the outcomes that matter most: safety, comfort, independence, and peace of mind."
           />
           <div className="grid gap-6 md:grid-cols-2">
@@ -310,7 +344,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. How care begins */}
+      {/* 7. How care begins */}
       <section className="section-pad bg-primary-soft/60" aria-labelledby="how-heading">
         <div className="container-site">
           <SectionHeading
@@ -331,14 +365,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. Review */}
+      {/* 8. Review */}
       <section className="section-pad bg-surface" aria-label="Google review">
         <div className="container-site">
           <ReviewCta />
         </div>
       </section>
 
-      {/* 8. Final CTA */}
+      {/* 9. Final CTA */}
       <CtaBanner />
 
       <Footer />

@@ -3,14 +3,17 @@ import Link from "next/link";
 type CtaBannerProps = {
   title?: string;
   description?: string;
+  /** Extra classes for the outer section (e.g. background). */
+  className?: string;
 };
 
 export default function CtaBanner({
   title = "Ready to talk about care for your loved one?",
-  description = "We’re here to listen, answer questions, and help you explore whether Penda Home Care LLC in Maricopa, AZ is the right fit—no pressure, just a caring conversation.",
+  description = "We’re here to listen, answer questions, and help you explore whether Penda Home Care LLC in Maricopa, AZ is the right fit. No pressure, just a caring conversation.",
+  className = "",
 }: CtaBannerProps) {
   return (
-    <section className="section-pad" aria-labelledby="cta-heading">
+    <section className={`section-pad ${className}`.trim()} aria-labelledby="cta-heading">
       <div className="container-site">
         <div className="relative overflow-hidden rounded-3xl bg-primary-dark px-8 py-12 text-center md:px-16 md:py-16">
           <div

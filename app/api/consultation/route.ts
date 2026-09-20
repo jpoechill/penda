@@ -16,7 +16,7 @@ type ConsultationBody = {
   availability?: string;
   referral?: string;
   notes?: string;
-  /** Honeypot — must stay empty */
+  /** Honeypot  -  must stay empty */
   company?: string;
   /** Client form-open timestamp (ms) */
   formStartedAt?: number | string;
@@ -133,11 +133,11 @@ export async function POST(request: Request) {
     ``,
     `Name: ${fields.name}`,
     `Email or phone: ${fields.contact}`,
-    `Availability: ${fields.availability || "—"}`,
-    `How they heard about us: ${fields.referral || "—"}`,
+    `Availability: ${fields.availability || "n/a"}`,
+    `How they heard about us: ${fields.referral || "n/a"}`,
     ``,
     `Notes:`,
-    fields.notes || "—",
+    fields.notes || "n/a",
   ];
 
   const resend = new Resend(apiKey);
@@ -146,7 +146,7 @@ export async function POST(request: Request) {
     const { error } = await resend.emails.send({
       from,
       to: [to],
-      subject: `Care consultation request — ${fields.name}`,
+      subject: `Care consultation request: ${fields.name}`,
       text: lines.join("\n"),
       ...(looksLikeEmail(fields.contact) ? { replyTo: fields.contact } : {}),
     });

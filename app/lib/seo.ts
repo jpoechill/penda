@@ -47,7 +47,7 @@ export function pageMetadata({
           url: ogImage,
           width: 1200,
           height: 630,
-          alt: `${SITE_NAME} — ${title}`,
+          alt: `${SITE_NAME}: ${title}`,
         },
       ],
     },

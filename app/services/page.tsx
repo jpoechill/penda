@@ -10,7 +10,7 @@ import { pageMetadata } from "../lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Assisted Living Services",
   description:
-    "Explore Penda Home Care LLC services in Maricopa, AZ—comfortable living, accessibility, safety, transportation, medication management, prepared meals, and AHCCCS/ALTCS support.",
+    "Explore Penda Home Care LLC services in Maricopa, AZ: comfortable living, accessibility, safety, transportation, medication management, prepared meals, and AHCCCS/ALTCS support.",
   path: "/services",
   image: "/img/services_hero.jpg",
 });
@@ -68,7 +68,7 @@ export default function ServicesPage() {
       <Header />
       <PageHero
         title="Our care services"
-        description="Practical, compassionate support in Maricopa, AZ that helps seniors live safely, comfortably, and with dignity—day by day."
+        description="Practical, compassionate support in Maricopa, AZ that helps seniors live safely, comfortably, and with dignity, day by day."
         imageSrc="/img/services_hero.jpg"
         imageAlt="Caregiver walking arm-in-arm with a senior resident in a bright, welcoming home"
         imagePosition="object-[center_18%]"
@@ -78,7 +78,7 @@ export default function ServicesPage() {
         <div className="container-site">
           <SectionHeading
             title="Wellness support for everyday living"
-            description="Each service is designed around real daily needs—for residents and for the families who want them to feel secure and at home."
+            description="Each service is designed around real daily needs, for residents and for the families who want them to feel secure and at home."
           />
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -102,46 +102,55 @@ export default function ServicesPage() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
 
-          <aside className="mt-12 rounded-2xl border border-dashed border-primary/40 bg-primary-soft/50 p-6 md:p-8">
-            <h2 className="font-display text-xl font-semibold text-foreground md:text-2xl">
-              Who Our Services Are For
-            </h2>
-            <p className="mt-4 prose-care text-base">
-              Penda Home Care is a good fit for seniors who need dependable daily support in a safe,
-              comfortable, home-like setting. This may include help with mobility, medications, meals,
-              personal care, or simply the reassurance of having a caring professional nearby.
-            </p>
-            <p className="mt-4 prose-care text-base">Our services include:</p>
-            <ul className="mt-5 grid gap-2.5 sm:grid-cols-2">
-              {[
-                "Individualized resident care plans",
-                "Assistance with activities of daily living",
-                "Medication support and management, as authorized",
-                "Personal care and daily living assistance",
-                "Trained and qualified caregivers",
-                "CPR and First Aid-trained staff",
-                "Coordination with healthcare providers and families",
-                "Hospice coordination and support, when appropriate",
-                "Respect for each resident’s rights, privacy, dignity, and independence",
-              ].map((item) => (
-                <li
-                  key={item}
-                  className="rounded-lg border border-border bg-white px-4 py-2 text-sm font-medium text-foreground md:text-base"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <p className="mt-5 prose-care text-base">
-              Penda Home Care also works with eligible residents through AHCCCS and ALTCS when services
-              are authorized and covered.
-            </p>
-          </aside>
+      <section
+        className="section-pad border-t border-border bg-[#f8faf9]"
+        aria-labelledby="who-services-heading"
+      >
+        <div className="container-site">
+          <div className="rounded-2xl border border-border bg-white p-6 md:p-10 lg:p-12">
+            <SectionHeading
+              id="who-services-heading"
+              title="Who our services are for"
+              description="Penda Home Care is a good fit for seniors who need dependable daily support in a safe, comfortable, home-like setting. That may include help with mobility, medications, meals, personal care, or simply having a caring professional nearby."
+            />
+
+            <div className="mx-auto max-w-3xl">
+              <h3 className="font-display text-2xl font-semibold text-foreground md:text-3xl">
+                What our care includes
+              </h3>
+              <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+                {[
+                  "Individualized care plans",
+                  "Help with daily living activities",
+                  "Medication support, as authorized",
+                  "Personal care assistance",
+                  "Trained, CPR and First Aid-ready caregivers",
+                  "Coordination with families and healthcare providers",
+                  "Hospice support when appropriate",
+                  "Respect for rights, privacy, dignity, and independence",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex gap-3 text-base leading-relaxed text-foreground"
+                  >
+                    <span
+                      className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
+                      aria-hidden="true"
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
       <CtaBanner
+        className="bg-white"
         title="Not sure which services you need?"
         description="Tell us about your loved one’s routines and concerns. We’ll help you understand how Penda Home Care LLC in Maricopa, AZ can support them."
       />
