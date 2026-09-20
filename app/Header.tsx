@@ -71,11 +71,11 @@ export default function Header() {
           <Link
             href="/"
             className="relative z-10 flex shrink-0 items-center gap-3"
-            aria-label="Penda Home Care LLC, Maricopa, AZ, home"
+            aria-label="Penda Home Care, Maricopa, AZ, home"
           >
             <Image
               src="/penda-logo-nav.png"
-              alt="Penda Home Care LLC"
+              alt="Penda Home Care"
               width={276}
               height={80}
               className="h-11 w-auto md:h-14"

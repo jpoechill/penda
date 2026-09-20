@@ -10,7 +10,7 @@ import { pageMetadata } from "../lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Assisted Living Services",
   description:
-    "Explore Penda Home Care LLC services in Maricopa, AZ: comfortable living, accessibility, safety, transportation, medication management, prepared meals, and AHCCCS/ALTCS support.",
+    "Explore Penda Home Care services in Maricopa, AZ: comfortable living, accessibility, safety, transportation, medication management, prepared meals, and AHCCCS/ALTCS support.",
   path: "/services",
   image: "/img/services_hero.jpg",
 });
@@ -152,7 +152,7 @@ export default function ServicesPage() {
       <CtaBanner
         className="bg-white"
         title="Not sure which services you need?"
-        description="Tell us about your loved one’s routines and concerns. We’ll help you understand how Penda Home Care LLC in Maricopa, AZ can support them."
+        description="Tell us about your loved one’s routines and concerns. We’ll help you understand how Penda Home Care in Maricopa, AZ can support them."
       />
       <Footer />
     </main>

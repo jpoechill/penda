@@ -179,7 +179,7 @@ export default function HomeFacilityPage({ home }: HomeFacilityPageProps) {
             </div>
             <div className="relative aspect-[16/10] w-full bg-[var(--warm-wash)] md:aspect-[21/9]">
               <iframe
-                title={`Map showing Penda Home Care LLC at ${home.address}`}
+                title={`Map showing Penda Home Care at ${home.address}`}
                 src={home.mapEmbedUrl}
                 className="absolute inset-0 h-full w-full border-0"
                 loading="lazy"

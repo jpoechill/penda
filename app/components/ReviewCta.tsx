@@ -31,7 +31,7 @@ export default function ReviewCta({ variant = "soft", className = "" }: ReviewCt
           variant === "dark" ? "text-white" : "text-foreground"
         }`}
       >
-        Leave a Google review for Penda Home Care LLC
+        Leave a Google review for Penda Home Care
       </h2>
       <p className={`mx-auto mt-2 max-w-lg text-base leading-relaxed ${muted}`}>
         If we’ve cared for your family in Maricopa, AZ, a short Google review helps other families

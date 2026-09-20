@@ -147,7 +147,7 @@ export default function JsonLd() {
         name: "Where is Penda Home Care located?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `Penda Home Care LLC operates assisted living homes in Maricopa, AZ, including ${SITE_STREET} and ${santaMonica?.street ?? "W. Santa Monica Drive"}.`,
+          text: `Penda Home Care operates assisted living homes in Maricopa, AZ, including ${SITE_STREET} and ${santaMonica?.street ?? "W. Santa Monica Drive"}.`,
         },
       },
       {

@@ -8,7 +8,7 @@ import { pageMetadata } from "../lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Family Stories",
   description:
-    "Family stories from Penda Home Care LLC in Maricopa, AZ are coming soon. Contact us to learn more about personalized assisted living for your loved one.",
+    "Family stories from Penda Home Care in Maricopa, AZ are coming soon. Contact us to learn more about personalized assisted living for your loved one.",
   path: "/testimonials",
   image: "/img/who_we_are.jpg",
 });
@@ -39,7 +39,7 @@ export default function TestimonialsPage() {
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-muted">
               We’re preparing authentic reflections from families who have trusted Penda Home Care
-              LLC in Maricopa, AZ. Check back soon, or reach out if you’d like to learn more about
+              in Maricopa, AZ. Check back soon, or reach out if you’d like to learn more about
               care for your loved one.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">

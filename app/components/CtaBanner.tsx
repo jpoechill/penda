@@ -9,7 +9,7 @@ type CtaBannerProps = {
 
 export default function CtaBanner({
   title = "Ready to talk about care for your loved one?",
-  description = "We’re here to listen, answer questions, and help you explore whether Penda Home Care LLC in Maricopa, AZ is the right fit. No pressure, just a caring conversation.",
+  description = "We’re here to listen, answer questions, and help you explore whether Penda Home Care in Maricopa, AZ is the right fit. No pressure, just a caring conversation.",
   className = "",
 }: CtaBannerProps) {
   return (

@@ -170,7 +170,7 @@ export default function HomePage() {
             }`}
           >
             <p className="font-display text-2xl font-semibold tracking-tight text-white md:text-3xl">
-              Penda Home Care LLC
+              Penda Home Care
             </p>
             <p className="mt-1 text-sm font-semibold uppercase tracking-[0.14em] text-white/85">
               Maricopa, Arizona
@@ -243,7 +243,7 @@ export default function HomePage() {
                 A small Maricopa, AZ home dedicated to personal, heartfelt care
               </h2>
               <p className="mt-5 prose-care">
-                Our mission at Penda Home Care LLC is to embody the love and care that “Penda”
+                Our mission at Penda Home Care is to embody the love and care that “Penda”
                 represents. We offer a home-like experience where respect, loyalty, and integrity
                 guide everything we do.
               </p>

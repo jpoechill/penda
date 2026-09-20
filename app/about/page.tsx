@@ -16,7 +16,7 @@ import { pageMetadata } from "../lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "About Us",
   description:
-    "Learn about Penda Home Care LLC, an Arizona licensed assisted living home (ADHS AL13024H) in Maricopa dedicated to personalized, compassionate senior care.",
+    "Learn about Penda Home Care, an Arizona licensed assisted living home (ADHS AL13024H) in Maricopa dedicated to personalized, compassionate senior care.",
   path: "/about",
   image: "/img/about_cover.jpg",
 });
@@ -51,7 +51,7 @@ export default function AboutPage() {
               Care that comes from the heart
             </h2>
             <p className="mt-5 prose-care">
-              Penda Home Care LLC offers a home-like experience grounded in respect, loyalty, and
+              Penda Home Care offers a home-like experience grounded in respect, loyalty, and
               integrity. Our caregivers provide personalized support so seniors can live
               comfortably, with their preferences and well-being at the center of every day.
             </p>

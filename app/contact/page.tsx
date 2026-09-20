@@ -16,7 +16,7 @@ import { pageMetadata } from "../lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Contact Us",
   description:
-    `Contact Penda Home Care LLC in Maricopa, AZ. Call ${SITE_PHONE} or email ${SITE_EMAIL} to talk with our care team about assisted living.`,
+    `Contact Penda Home Care in Maricopa, AZ. Call ${SITE_PHONE} or email ${SITE_EMAIL} to talk with our care team about assisted living.`,
   path: "/contact",
   image: "/img/contact_hero.jpg",
 });
@@ -74,7 +74,7 @@ export default function ContactPage() {
       <Header />
       <PageHero
         title="Get in touch"
-        description="Reach Penda Home Care LLC in Maricopa, AZ, whether you’re exploring care options, scheduling a visit, or have questions."
+        description="Reach Penda Home Care in Maricopa, AZ, whether you’re exploring care options, scheduling a visit, or have questions."
         imageSrc="/img/contact_hero.jpg"
         imageAlt="Welcoming entry and care environment in Maricopa, AZ"
         imagePosition="object-[center_45%]"
@@ -84,7 +84,7 @@ export default function ContactPage() {
         <div className="container-site">
           <div className="mx-auto max-w-3xl text-center">
             <p className="prose-care">
-              At Penda Home Care LLC in Maricopa, Arizona, we are committed to providing
+              At Penda Home Care in Maricopa, Arizona, we are committed to providing
               compassionate, personalized care for every resident. Reach out anytime. We’re happy to
               listen and guide you through next steps.
             </p>

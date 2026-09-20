@@ -131,7 +131,7 @@ export const homeLocations: HomeLocation[] = [
     path: "/facilities/portis",
     metaTitle: "W. Portis Drive Assisted Living Home",
     metaDescription:
-      "Tour Penda Home Care LLC’s assisted living home on W. Portis Drive in Maricopa, AZ: 5 bedrooms, 3 bathrooms, private and semi-private rooms, community areas, patio, and backyard.",
+      "Tour Penda Home Care’s assisted living home on W. Portis Drive in Maricopa, AZ: 5 bedrooms, 3 bathrooms, private and semi-private rooms, community areas, patio, and backyard.",
     heroTitle: "W. Portis Drive",
     heroDescription:
       "Our established assisted living home in Maricopa: comfortable rooms, shared spaces, and care that feels personal every day.",
@@ -169,11 +169,11 @@ export const homeLocations: HomeLocation[] = [
     ctaDescription:
       "A visit is the best way to feel the atmosphere at our Portis Drive home and decide whether it is the right fit for your loved one.",
     mapEmbedUrl:
-      "https://www.google.com/maps?q=Penda+Home+Care+LLC,+40968+W.+Portis+Drive,+Maricopa,+AZ+85138&hl=en&z=16&output=embed",
+      "https://www.google.com/maps?q=Penda+Home+Care,+40968+W.+Portis+Drive,+Maricopa,+AZ+85138&hl=en&z=16&output=embed",
     mapDirectionsUrl:
       "https://www.google.com/maps/dir/?api=1&destination=40968+W.+Portis+Drive,+Maricopa,+AZ+85138",
     mapPlaceUrl:
-      "https://www.google.com/maps/place/Penda+Home+Care+LLC/@33.0464864,-112.0078846,783m/data=!3m2!1e3!4b1!4m6!3m5!1s0x872afbc1cf494cd5:0xde2649a99cea38be!8m2!3d33.0464864!4d-112.0078846!16s%2Fg%2F11n47z4q1v?entry=ttu",
+      "https://www.google.com/maps/place/Penda+Home+Care/@33.0464864,-112.0078846,783m/data=!3m2!1e3!4b1!4m6!3m5!1s0x872afbc1cf494cd5:0xde2649a99cea38be!8m2!3d33.0464864!4d-112.0078846!16s%2Fg%2F11n47z4q1v?entry=ttu",
   },
   {
     id: "santa-monica",

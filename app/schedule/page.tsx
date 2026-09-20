@@ -9,7 +9,7 @@ import { SITE_EMAIL, SITE_PHONE } from "../lib/site";
 export const metadata: Metadata = pageMetadata({
   title: "Schedule a Care Consultation",
   description:
-    `Schedule a care consultation or tour of Penda Home Care LLC in Maricopa, AZ. Call ${SITE_PHONE} or email ${SITE_EMAIL} to visit our assisted living home.`,
+    `Schedule a care consultation or tour of Penda Home Care in Maricopa, AZ. Call ${SITE_PHONE} or email ${SITE_EMAIL} to visit our assisted living home.`,
   path: "/schedule",
   image: "/img/schedule_hero.jpg",
 });
