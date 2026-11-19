@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Source_Sans_3 } from "next/font/google";
+import ConsultationPrompt from "./components/ConsultationPrompt";
 import JsonLd from "./components/JsonLd";
 import {
   SITE_KEYWORDS,
@@ -110,6 +111,8 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <JsonLd />
         {children}
+        {/* Soft delayed CTA — set ENABLE_CONSULTATION_PROMPT=false or remove this line to retract */}
+        <ConsultationPrompt />
       </body>
     </html>
   );
