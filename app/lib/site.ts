@@ -19,8 +19,8 @@ export const SITE_POSTAL = "85138";
 export const SITE_COUNTRY = "US";
 export const SITE_MAP_COORDS = { lat: 33.0464864, lng: -112.0078846 };
 
-export const SITE_PHONE = "(520) 457-7645";
-export const SITE_PHONE_TEL = "+15204577645";
+export const SITE_PHONE = "(925) 698-9281";
+export const SITE_PHONE_TEL = "+19256989281";
 export const SITE_FAX = "(520) 423-3363";
 export const SITE_EMAIL = "pendacare2023@gmail.com";
 

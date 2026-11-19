@@ -186,7 +186,7 @@ export default function ConsultationForm() {
             maxLength={120}
             autoComplete="email"
             className={fieldClass(Boolean(fieldErrors.contact))}
-            placeholder="email@example.com or (520) 555-0123"
+            placeholder="email@example.com or (925) 555-0123"
             disabled={disabled}
             aria-invalid={Boolean(fieldErrors.contact)}
             onChange={() => clearFieldError("contact")}

@@ -106,8 +106,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${display.variable} ${sans.variable} font-sans antialiased`}>
+    <html lang="en" className={`${display.variable} ${sans.variable}`}>
+      <body className="font-sans antialiased">
         <JsonLd />
         {children}
       </body>

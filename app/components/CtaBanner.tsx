@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SITE_PHONE_TEL } from "../lib/site";
 
 type CtaBannerProps = {
   title?: string;
@@ -36,7 +37,7 @@ export default function CtaBanner({
               <Link href="/schedule" className="btn-on-dark w-full sm:w-auto">
                 Schedule a Care Consultation
               </Link>
-              <Link href="tel:5204577645" className="btn-ghost-on-dark w-full sm:w-auto">
+              <Link href={`tel:${SITE_PHONE_TEL}`} className="btn-ghost-on-dark w-full sm:w-auto">
                 Talk With Our Care Team
               </Link>
             </div>
